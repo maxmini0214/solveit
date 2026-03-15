@@ -31,7 +31,7 @@ function TurnstileWidget({ onToken }: { onToken: (token: string) => void }) {
 
   useEffect(() => {
     setFailed(false);
-    const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAAACrF2FNC-kTFDfnn";
+    const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAACrF2FNC-kTFDfnn";
 
     const renderWidget = () => {
       if (ref.current && window.turnstile) {
