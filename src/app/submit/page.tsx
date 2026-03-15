@@ -49,12 +49,12 @@ function TurnstileWidget({ onToken }: { onToken: (token: string) => void }) {
       }
     };
 
-    // Timeout: if no token in 8s, show retry
+    // Timeout: if no token in 15s, show retry
     const timer = setTimeout(() => {
       if (!widgetId.current || ref.current?.querySelector("iframe") === null) {
         setFailed(true);
       }
-    }, 8000);
+    }, 15000);
 
     if (window.turnstile) {
       renderWidget();

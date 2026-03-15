@@ -48,6 +48,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link
+          rel="preload"
+          href="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+          as="script"
+        />
+      </head>
       <body
         className={`${geistMono.variable} antialiased bg-neutral-950 text-neutral-50 min-h-screen`}
         style={{ fontFamily: "'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', sans-serif" }}
