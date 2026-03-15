@@ -19,7 +19,7 @@ export const dict = {
     step4Desc: "해결되면 이메일로 알려드리고, Solved 탭에서 확인할 수 있어요.",
     submitTitle: "불편함을 알려주세요",
     submitDesc: "일상에서 겪는 불편함을 자유롭게 적어주세요. 형식은 상관없습니다.",
-    submitPlaceholder: "어떤 불편함이 있나요? (5~5000자)",
+    submitPlaceholder: "어떤 불편함이 있나요? (~5000자)",
     submitButton: "접수하기",
     submitting: "접수 중...",
     frustrationLabel: "불편한 점",

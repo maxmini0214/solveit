@@ -50,7 +50,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
   // Prevent hydration mismatch: render nothing until client-side lang is resolved
   if (!mounted) {
     return (
-      <LangContext.Provider value={{ lang: "ko", setLang, t: (key: string) => (dict.ko as Record<string, string>)[key] || key }}>
+      <LangContext.Provider value={{ lang: "ko", setLang, t: (key: string) => (dict.ko as Record<string, string>)[key] ?? key }}>
         {children}
       </LangContext.Provider>
     );

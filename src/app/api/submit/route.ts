@@ -90,8 +90,8 @@ export async function POST(req: NextRequest) {
     const turnstileToken = body.turnstileToken || "";
 
     // 1. Input validation
-    if (!text || text.length < 5) {
-      return NextResponse.json({ error: "Too short (min 5 chars)" }, { status: 400 });
+    if (!text) {
+      return NextResponse.json({ error: "Text is required" }, { status: 400 });
     }
     if (text.length > 5000) {
       return NextResponse.json({ error: "Too long (max 5000 chars)" }, { status: 400 });
