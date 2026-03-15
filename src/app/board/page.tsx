@@ -153,7 +153,7 @@ export default function BoardPage() {
                     body: JSON.stringify({ email: emailSearch }),
                   });
                   const data = await res.json();
-                  setEmailResults(data.items || []);
+                  setEmailResults(Array.isArray(data) ? data : data.items || []);
                 } catch {
                   setEmailResults([]);
                 }
