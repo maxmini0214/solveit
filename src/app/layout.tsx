@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { LangProvider } from "@/components/LangContext";
+import { LangToggle } from "@/components/LangToggle";
+import { NavLinks } from "@/components/NavLinks";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,25 +33,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950 text-neutral-50 min-h-screen`}
       >
-        <nav className="border-b border-neutral-800 px-6 py-4">
-          <div className="max-w-5xl mx-auto flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold tracking-tight">
-              Solve<span className="text-emerald-400">It</span>
-            </Link>
-            <div className="flex gap-6 text-sm text-neutral-400">
-              <Link href="/submit" className="hover:text-neutral-100 transition">
-                Submit
+        <LangProvider>
+          <nav className="border-b border-neutral-800 px-6 py-4">
+            <div className="max-w-5xl mx-auto flex items-center justify-between">
+              <Link href="/" className="text-xl font-bold tracking-tight">
+                Solve<span className="text-emerald-400">It</span>
               </Link>
-              <Link href="/board" className="hover:text-neutral-100 transition">
-                Board
-              </Link>
-              <Link href="/solved" className="hover:text-neutral-100 transition">
-                Solved
-              </Link>
+              <div className="flex items-center gap-4">
+                <NavLinks />
+                <LangToggle />
+              </div>
             </div>
-          </div>
-        </nav>
-        <main className="max-w-5xl mx-auto px-6 py-10">{children}</main>
+          </nav>
+          <main className="max-w-5xl mx-auto px-6 py-10">{children}</main>
+        </LangProvider>
       </body>
     </html>
   );

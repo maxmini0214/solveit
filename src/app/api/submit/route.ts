@@ -1,217 +1,188 @@
 import { NextRequest, NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
-import { checkRateLimit } from "@/lib/rate-limit";
-import { validateSubmission } from "@/lib/validate";
-import { checkOrigin } from "@/lib/csrf";
-import { getSupabaseClient, isSupabaseConfigured } from "@/lib/supabase";
 
-const DATA_FILE = path.join(process.cwd(), "data", "submissions.json");
+export const runtime = "edge";
 
-interface Submission {
-  id: string;
-  text: string;
-  email: string | null;
-  category: string | null;
-  tags: string[];
-  size: string | null;
-  status: "open" | "in-progress" | "solved";
-  votes: number;
-  createdAt: string;
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const TURNSTILE_SECRET = process.env.TURNSTILE_SECRET_KEY || "";
+
+function adminHeaders() {
+  const key = SERVICE_KEY || SUPABASE_KEY!;
+  return {
+    "Content-Type": "application/json",
+    "apikey": key,
+    "Authorization": `Bearer ${key}`,
+  };
 }
 
-// ─── JSON File Fallback ─────────────────────────────────────
+function anonHeaders() {
+  return {
+    "Content-Type": "application/json",
+    "apikey": SUPABASE_KEY!,
+    "Authorization": `Bearer ${SUPABASE_KEY}`,
+    "Prefer": "count=exact",
+  };
+}
 
-async function getSubmissionsFromFile(): Promise<Submission[]> {
+// ── Turnstile verification ──
+async function verifyTurnstile(token: string, ip: string): Promise<boolean> {
+  if (!TURNSTILE_SECRET) return true; // no key configured = skip verification
   try {
-    const data = await fs.readFile(DATA_FILE, "utf-8");
-    return JSON.parse(data);
+    const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `secret=${TURNSTILE_SECRET}&response=${token}&remoteip=${ip}`,
+    });
+    const data = await res.json();
+    return data.success === true;
   } catch {
-    return [];
+    return false;
   }
 }
 
-async function saveSubmissionToFile(submission: Submission) {
-  const dir = path.dirname(DATA_FILE);
-  await fs.mkdir(dir, { recursive: true });
-  const submissions = await getSubmissionsFromFile();
-  submissions.push(submission);
-  await fs.writeFile(DATA_FILE, JSON.stringify(submissions, null, 2));
+// ── DB-based rate limiting ──
+async function checkDbRateLimit(ipHash: string): Promise<{ allowed: boolean; count: number }> {
+  if (!SUPABASE_URL || !SERVICE_KEY) return { allowed: true, count: 0 };
+
+  // Count submissions from this IP in last 10 minutes
+  const tenMinAgo = new Date(Date.now() - 10 * 60 * 1000).toISOString();
+  const res = await fetch(
+    `${SUPABASE_URL}/rest/v1/submissions?ip_hash=eq.${ipHash}&created_at=gte.${tenMinAgo}&select=id`,
+    { headers: adminHeaders() }
+  );
+  const data = await res.json();
+  const count = Array.isArray(data) ? data.length : 0;
+
+  // Max 5 submissions per 10 minutes per IP
+  return { allowed: count < 5, count };
 }
 
-// ─── Supabase Operations ────────────────────────────────────
+// ── Duplicate text check ──
+async function checkDuplicate(text: string): Promise<boolean> {
+  if (!SUPABASE_URL || !SUPABASE_KEY) return false;
 
-async function insertSubmissionToSupabase(data: {
-  text: string;
-  email: string | null;
-  ip_hash: string;
-}): Promise<{ id: string } | null> {
-  const supabase = getSupabaseClient();
-  if (!supabase) return null;
-
-  const { data: result, error } = await supabase
-    .from("submissions")
-    .insert({
-      text: data.text,
-      email: data.email,
-      ip_hash: data.ip_hash,
-    })
-    .select("id")
-    .single();
-
-  if (error) {
-    console.error("Supabase insert error:", error);
-    return null;
-  }
-
-  return result;
+  const res = await fetch(
+    `${SUPABASE_URL}/rest/v1/submissions?text=eq.${encodeURIComponent(text)}&select=id&limit=1`,
+    { headers: { "apikey": SUPABASE_KEY, "Authorization": `Bearer ${SUPABASE_KEY}` } }
+  );
+  const data = await res.json();
+  return Array.isArray(data) && data.length > 0;
 }
 
-async function getSubmissionsFromSupabase(): Promise<Submission[] | null> {
-  const supabase = getSupabaseClient();
-  if (!supabase) return null;
-
-  const { data, error } = await supabase
-    .from("submissions")
-    .select("id, text, category, tags, size, status, votes, created_at")
-    .order("created_at", { ascending: false });
-
-  if (error) {
-    console.error("Supabase select error:", error);
-    return null;
-  }
-
-  return (data || []).map((row) => ({
-    id: row.id,
-    text: row.text,
-    email: null, // Never expose email publicly
-    category: row.category,
-    tags: row.tags || [],
-    size: row.size,
-    status: row.status,
-    votes: row.votes,
-    createdAt: row.created_at,
-  }));
+// ── IP hashing ──
+async function hashIP(ip: string): Promise<string> {
+  const encoder = new TextEncoder();
+  const buf = await crypto.subtle.digest("SHA-256", encoder.encode(ip + (process.env.HASH_SALT || "solveit-salt-x7k9")));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
 }
 
-// ─── Route Handlers ─────────────────────────────────────────
-
+// ── POST: submit ──
 export async function POST(req: NextRequest) {
   try {
-    // 1. CSRF check
-    const origin = req.headers.get("origin");
-    const referer = req.headers.get("referer");
-    if (!checkOrigin(origin, referer)) {
-      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    if (!SUPABASE_URL || !SUPABASE_KEY) {
+      return NextResponse.json({ error: "DB not configured" }, { status: 503 });
     }
 
-    // 2. Rate limiting
-    const ip =
-      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-      req.headers.get("x-real-ip") ||
-      "unknown";
+    const body = await req.json();
+    const text = (body.text || "").trim();
+    const email = body.email || null;
+    const turnstileToken = body.turnstileToken || "";
 
-    const { allowed, remaining } = checkRateLimit(ip);
-    if (!allowed) {
+    // 1. Input validation
+    if (!text || text.length < 5) {
+      return NextResponse.json({ error: "Too short (min 5 chars)" }, { status: 400 });
+    }
+    if (text.length > 2000) {
+      return NextResponse.json({ error: "Too long (max 2000 chars)" }, { status: 400 });
+    }
+
+    // 2. Turnstile captcha verification
+    const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (!await verifyTurnstile(turnstileToken, ip)) {
+      return NextResponse.json({ error: "Captcha verification failed" }, { status: 403 });
+    }
+
+    // 3. IP hash
+    const ipHash = await hashIP(ip);
+
+    // 4. DB-based rate limit (IP당 10분에 5회)
+    const rateCheck = await checkDbRateLimit(ipHash);
+    if (!rateCheck.allowed) {
       return NextResponse.json(
-        { error: "Too many requests. Please wait a minute." },
-        { status: 429, headers: { "Retry-After": "60" } }
+        { error: "Too many submissions. Please wait a few minutes." },
+        { status: 429 }
       );
     }
 
-    // 3. Input validation & sanitization
-    const body = await req.json();
-    const validation = validateSubmission(body.text, body.email);
-
-    if (!validation.valid) {
-      return NextResponse.json({ error: validation.error }, { status: 400 });
+    // 5. Duplicate text check
+    if (await checkDuplicate(text)) {
+      return NextResponse.json(
+        { error: "This problem has already been submitted!" },
+        { status: 409 }
+      );
     }
 
-    const { text, email } = validation.sanitized;
+    // 6. Insert
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/submissions`, {
+      method: "POST",
+      headers: { ...adminHeaders(), "Prefer": "return=representation" },
+      body: JSON.stringify({ text, email, ip_hash: ipHash }),
+    });
 
-    // 4. Hash IP for storage (never store raw IP)
-    const encoder = new TextEncoder();
-    const hashBuffer = await crypto.subtle.digest(
-      "SHA-256",
-      encoder.encode(ip + "solveit-salt")
-    );
-    const ipHash = Array.from(new Uint8Array(hashBuffer))
-      .map((b) => b.toString(16).padStart(2, "0"))
-      .join("");
-
-    // 5. Insert — try Supabase first, fallback to JSON
-    let submissionId: string;
-
-    if (isSupabaseConfigured()) {
-      const result = await insertSubmissionToSupabase({
-        text,
-        email,
-        ip_hash: ipHash,
-      });
-      if (result) {
-        submissionId = result.id;
-      } else {
-        // Supabase error → fallback to JSON
-        submissionId = crypto.randomUUID();
-        const submission: Submission = {
-          id: submissionId,
-          text,
-          email,
-          category: null,
-          tags: [],
-          size: null,
-          status: "open",
-          votes: 0,
-          createdAt: new Date().toISOString(),
-        };
-        await saveSubmissionToFile(submission);
-      }
-    } else {
-      // No Supabase configured → JSON file
-      submissionId = crypto.randomUUID();
-      const submission: Submission = {
-        id: submissionId,
-        text,
-        email,
-        category: null,
-        tags: [],
-        size: null,
-        status: "open",
-        votes: 0,
-        createdAt: new Date().toISOString(),
-      };
-      await saveSubmissionToFile(submission);
+    if (!res.ok) {
+      return NextResponse.json({ error: "Failed to save" }, { status: 500 });
     }
 
-    return NextResponse.json(
-      { success: true, id: submissionId },
-      { headers: { "X-RateLimit-Remaining": remaining.toString() } }
-    );
-  } catch {
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    const data = await res.json();
+    const submissionId = data[0]?.id;
+
+    // AI 분류는 자동 실행하지 않음.
+    // max가 텔레그램으로 요청하거나, 크론으로 데일리 보고 시 수동 분류.
+
+    return NextResponse.json({ success: true, id: submissionId });
+  } catch (e) {
+    return NextResponse.json({ error: String(e) }, { status: 500 });
   }
 }
 
-export async function GET() {
-  // Try Supabase first
-  if (isSupabaseConfigured()) {
-    const supabaseData = await getSubmissionsFromSupabase();
-    if (supabaseData) {
-      return NextResponse.json(supabaseData);
-    }
+// ── GET: list with server-side search + pagination ──
+export async function GET(req: NextRequest) {
+  if (!SUPABASE_URL || !SUPABASE_KEY) {
+    return NextResponse.json({ items: [], total: 0, page: 1, pages: 0 });
   }
 
-  // Fallback to JSON file
-  const submissions = await getSubmissionsFromFile();
-  const publicSubmissions = submissions
-    .sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-    )
-    .map(({ email: _email, ...rest }) => rest);
+  try {
+    const url = new URL(req.url);
+    const search = url.searchParams.get("q");
+    const page = parseInt(url.searchParams.get("page") || "1");
+    const limit = Math.min(parseInt(url.searchParams.get("limit") || "20"), 50);
+    const offset = (page - 1) * limit;
 
-  return NextResponse.json(publicSubmissions);
+    const sortParam = url.searchParams.get("sort");
+    const order = sortParam === "votes" ? "votes.desc,created_at.desc" : "created_at.desc";
+
+    let endpoint = `${SUPABASE_URL}/rest/v1/submissions?select=id,text,status,votes,created_at&order=${order}&limit=${limit}&offset=${offset}`;
+
+    if (search) {
+      endpoint += `&text=ilike.*${encodeURIComponent(search)}*`;
+    }
+
+    const res = await fetch(endpoint, { headers: anonHeaders() });
+
+    if (!res.ok) {
+      return NextResponse.json({ error: "DB fetch failed" }, { status: 500 });
+    }
+
+    const data = await res.json();
+    const contentRange = res.headers.get("content-range");
+    const total = contentRange ? parseInt(contentRange.split("/")[1]) : data.length;
+
+    return NextResponse.json(
+      { items: data, total, page, pages: Math.ceil(total / limit) },
+      { headers: { "Cache-Control": "no-store, no-cache, must-revalidate" } }
+    );
+  } catch (e) {
+    return NextResponse.json({ error: String(e) }, { status: 500 });
+  }
 }

@@ -3,166 +3,164 @@
 
 ## 한 줄 요약
 
-**SolveIt** — 사용자가 일상 불편함을 제출하면 AI가 분류하고, 개발팀이 실제 솔루션을 만들어 제공하는 플랫폼.
+**SolveIt** — 사용자가 일상 불편함을 제출하면 AI가 자동 분류·병합하여 이슈로 관리하고, 개발팀이 실제 솔루션을 만들어 제공하는 플랫폼.
 
 ## 디렉토리 맵
 
 ```
 solveit/
-├── ARCHITECTURE.md          ← 📍 지금 여기 (에이전트 첫 진입점)
-├── AGENTS.md                ← 에이전트 작업 규칙
-├── CHANGELOG.md             ← 변경 이력
-├── README.md                ← 프로젝트 소개 + 셋업 가이드
-├── docs/
-│   ├── setup.md             ← 로컬 개발 환경 셋업
-│   ├── supabase.md          ← Supabase 설정 + 스키마 + RLS
-│   ├── deployment.md        ← Vercel 배포 가이드
-│   └── api-reference.md     ← API 엔드포인트 상세
-├── data/
-│   └── submissions.json     ← 로컬 JSON 파일 DB (fallback)
-├── public/                  ← 정적 자산 (SVG 아이콘 등)
+├── ARCHITECTURE.md          ← 📍 지금 여기
+├── .env.local               ← 환경변수 (git 제외)
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx       ← 루트 레이아웃 (다크 테마, nav)
-│   │   ├── page.tsx         ← 랜딩 페이지 (히어로 + CTA)
-│   │   ├── globals.css      ← 글로벌 스타일 (Tailwind)
-│   │   ├── favicon.ico
+│   │   ├── page.tsx         ← 랜딩 페이지
+│   │   ├── globals.css
 │   │   ├── submit/
-│   │   │   └── page.tsx     ← 불편 접수 폼 (클라이언트 컴포넌트)
+│   │   │   └── page.tsx     ← 불편 접수 폼
 │   │   ├── board/
-│   │   │   └── page.tsx     ← 문제 보드 (투표 + 목록)
+│   │   │   ├── page.tsx     ← 이슈 보드 (카테고리 필터, 정렬, 투표)
+│   │   │   └── [id]/
+│   │   │       ├── page.tsx
+│   │   │       └── detail.tsx ← 이슈 상세 (원본 접수 + 솔루션)
 │   │   ├── solved/
-│   │   │   └── page.tsx     ← 해결된 문제 (Coming Soon)
+│   │   │   └── page.tsx     ← 솔루션 목록 (타입별 필터)
 │   │   └── api/
-│   │       └── submit/
-│   │           └── route.ts ← POST: 접수 / GET: 목록 조회
-│   ├── components/
-│   │   └── ui/              ← shadcn/ui 컴포넌트
-│   │       ├── badge.tsx
-│   │       ├── button.tsx
-│   │       ├── card.tsx
-│   │       ├── dialog.tsx
-│   │       ├── input.tsx
-│   │       ├── label.tsx
-│   │       └── textarea.tsx
+│   │       ├── submit/route.ts    ← POST: 접수 / GET: 목록
+│   │       ├── classify/route.ts  ← POST: AI 분류 (Claude API)
+│   │       ├── issues/
+│   │       │   ├── route.ts       ← GET: 이슈 목록
+│   │       │   └── [id]/route.ts  ← GET: 이슈 상세 + 연결 접수/솔루션
+│   │       ├── solutions/
+│   │       │   ├── route.ts       ← GET: 솔루션 목록
+│   │       │   └── [slug]/route.ts← GET: 솔루션 상세
+│   │       ├── vote/route.ts      ← GET/POST: 투표
+│   │       └── my-submissions/route.ts
+│   ├── components/ui/      ← shadcn/ui 컴포넌트
 │   └── lib/
-│       ├── supabase.ts      ← Supabase 클라이언트 (서버/브라우저)
-│       ├── csrf.ts          ← CSRF 방어 (Origin 검증)
-│       ├── rate-limit.ts    ← 인메모리 rate limiter (IP 기반)
-│       ├── validate.ts      ← 입력 검증 + XSS 새니타이징
-│       └── utils.ts         ← 유틸리티 (cn 함수 등)
-├── supabase/
-│   ├── config.toml          ← Supabase 로컬 설정
-│   └── migrations/
-│       └── 20260315_init.sql← 초기 스키마 마이그레이션
-├── tests/
-│   ├── setup.ts             ← 테스트 환경 설정
-│   ├── fixtures/
-│   │   └── submissions.ts   ← 테스트 데이터 fixtures
-│   └── unit/
-│       ├── csrf.test.ts
-│       ├── rate-limit.test.ts
-│       └── validate.test.ts
-├── .env.local               ← 환경변수 (git 제외)
-├── .gitignore
-├── package.json
-├── tsconfig.json
-├── vitest.config.ts
-├── postcss.config.mjs
-├── eslint.config.mjs
-└── next.config.ts
+│       ├── csrf.ts          ← CSRF 방어
+│       ├── supabase.ts      ← Supabase 클라이언트 (레거시, 미사용)
+│       ├── rate-limit.ts
+│       ├── validate.ts
+│       └── utils.ts
 ```
 
-## 데이터 흐름
+## 핵심 데이터 흐름
 
 ```
-유저 접수                API                    DB                    보드
-───────────────────────────────────────────────────────────────────────────
-[Submit 폼]  ──POST──→ /api/submit           ┌─ Supabase (원격)
-   │                    ├─ CSRF 검증           │   submissions table
-   │                    ├─ Rate Limit 체크     │   votes table
-   │                    ├─ Input 검증/새니타이징│   projects table
-   │                    └─ INSERT ──────────→ ─┤
-   │                                           └─ JSON 파일 (fallback)
-   │
-[Board 페이지] ←──GET── /api/submit           
-   │                    └─ SELECT ──────────→  DB에서 조회
-   ├─ 투표 기능 (TODO)
-   └─ 카테고리 필터 (TODO)
+[Submit 폼] ──POST──→ /api/submit ──INSERT──→ submissions
+                         │
+                         └──fire & forget──→ /api/classify
+                                                │
+                                  ┌─────────────┼─────────────┐
+                                  │ Claude API로 분류          │
+                                  │ (category, tags, title)    │
+                                  ├─────────────┼─────────────┤
+                                  │ 기존 이슈 유사도 검색      │
+                                  │ score ≥ 0.8 → 병합        │
+                                  │ score < 0.8 → 새 이슈 생성 │
+                                  └─────────────┼─────────────┘
+                                                │
+                                    submission_issues 매핑
+                                    submission.ai_processed = true
+
+[Board 페이지] ←──GET── /api/issues ←── issues 테이블
+[Issue 상세]   ←──GET── /api/issues/[id] ←── issues + submissions + solutions
+[Solved 페이지]←──GET── /api/solutions ←── solutions 테이블
 ```
 
-**Supabase 전환 전략**: 환경변수(`NEXT_PUBLIC_SUPABASE_URL`)가 있으면 Supabase, 없으면 JSON 파일로 fallback.
-
-## 기술 스택
-
-| 카테고리 | 기술 | 버전 |
-|---------|------|------|
-| Framework | Next.js (App Router) | 16.1.6 |
-| Runtime | React | 19.2.3 |
-| Language | TypeScript | ^5 |
-| Styling | Tailwind CSS | ^4 |
-| UI Components | shadcn/ui (base-ui) | @base-ui/react ^1.3.0 |
-| Database | Supabase (PostgreSQL) | @supabase/supabase-js (준비) |
-| Database (fallback) | JSON 파일 | — |
-| Testing | Vitest + Testing Library | vitest ^4.1.0 |
-| Deployment | Vercel | (준비) |
-
-## 환경변수
-
-| 변수 | 설명 | 필수 | 어디서 |
-|------|------|------|-------|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase 프로젝트 URL | No (없으면 JSON fallback) | `.env.local` |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase 공개 anon 키 | No | `.env.local` |
-| `SUPABASE_SERVICE_ROLE_KEY` | Supabase 서비스 롤 키 (서버 전용) | No | `.env.local` |
-| `ANTHROPIC_API_KEY` | Claude API 키 (AI 분류용, TODO) | No | `.env.local` |
-
-## DB 스키마
-
-> 상세: [docs/supabase.md](docs/supabase.md)
+## DB 스키마 (v2 — 이슈 + 솔루션 확장)
 
 ```
-┌──────────────────┐       ┌──────────────────────┐       ┌──────────────┐
-│    projects       │       │  submission_projects  │       │  submissions  │
-├──────────────────┤       ├──────────────────────┤       ├──────────────┤
-│ id (PK, UUID)    │◀──┐   │ submission_id (FK)    │──────▶│ id (PK, UUID)│
-│ title            │   └───│ project_id (FK)       │       │ text         │
-│ description      │       │ (composite PK)        │       │ email        │
-│ status           │       └──────────────────────┘       │ category     │
-│ demo_url         │                                       │ tags[]       │
-│ repo_url         │       ┌──────────────────────┐       │ size         │
-│ created_at       │       │       votes           │       │ status       │
-│ updated_at       │       ├──────────────────────┤       │ votes        │
-└──────────────────┘       │ id (PK, UUID)        │       │ ai_analysis  │
-                           │ submission_id (FK)    │──────▶│ ip_hash      │
-                           │ ip_hash              │       │ created_at   │
-                           │ created_at           │       │ updated_at   │
-                           │ UNIQUE(sub_id,ip)    │       └──────────────┘
-                           └──────────────────────┘
+┌──────────────┐     ┌──────────────────┐     ┌──────────────┐
+│  submissions  │     │ submission_issues │     │    issues     │
+├──────────────┤     ├──────────────────┤     ├──────────────┤
+│ id (PK)      │◀────│ submission_id(FK) │     │ id (PK)      │
+│ text         │     │ issue_id (FK)     │────▶│ slug (UNIQUE)│
+│ email        │     │ similarity_score  │     │ title        │
+│ status       │     │ created_at        │     │ description  │
+│ votes        │     └──────────────────┘     │ category     │
+│ ip_hash      │                               │ subcategory  │
+│ ai_category  │     ┌──────────────────┐     │ tags[]       │
+│ ai_tags[]    │     │  issue_solutions  │     │ status       │
+│ ai_processed │     ├──────────────────┤     │ vote_count   │
+│ created_at   │     │ issue_id (FK)     │────▶│ submission_  │
+│ updated_at   │     │ solution_id (FK)  │     │   count      │
+└──────────────┘     └──────────────────┘     │ urgency      │
+                               │               │ ai_summary   │
+                     ┌─────────┘               │ ai_confidence│
+                     ▼                         │ merged_into  │
+              ┌──────────────┐                │ created_at   │
+              │  solutions    │                │ updated_at   │
+              ├──────────────┤                └──────────────┘
+              │ id (PK)      │
+              │ slug (UNIQUE)│     ┌──────────────────┐
+              │ title        │     │      votes        │
+              │ description  │     ├──────────────────┤
+              │ type         │     │ id (PK)          │
+              │ status       │     │ submission_id(FK)│
+              │ config (JSON)│     │ ip_hash          │
+              │ content      │     │ created_at       │
+              │ metrics(JSON)│     └──────────────────┘
+              │ category     │
+              │ tags[]       │
+              │ created_at   │
+              │ updated_at   │
+              └──────────────┘
 ```
 
-**관계**: submissions ←N:M→ projects (via submission_projects), submissions ←1:N→ votes
+**테이블 관계**:
+- submissions ↔ issues: N:M (via submission_issues)
+- issues ↔ solutions: N:M (via issue_solutions)
+- submissions ← votes: 1:N
 
 ## API 엔드포인트
 
-> 상세: [docs/api-reference.md](docs/api-reference.md)
-
 | Method | Path | 설명 | 인증 |
 |--------|------|------|------|
-| `POST` | `/api/submit` | 새 불편 접수 | 없음 (rate limit + CSRF) |
-| `GET` | `/api/submit` | 접수 목록 조회 (email 제외) | 없음 |
+| `POST` | `/api/submit` | 새 불편 접수 (→ 자동 분류 트리거) | Turnstile + CSRF |
+| `GET` | `/api/submit` | 접수 목록 (레거시) | 없음 |
+| `POST` | `/api/classify` | AI 분류 (submission → issue 매핑) | 서버 내부 |
+| `GET` | `/api/issues` | 이슈 목록 (필터: category, status, sort) | 없음 |
+| `GET` | `/api/issues/[id]` | 이슈 상세 + 연결 접수/솔루션 | 없음 |
+| `GET` | `/api/solutions` | 솔루션 목록 (필터: type, category) | 없음 |
+| `GET` | `/api/solutions/[slug]` | 솔루션 상세 | 없음 |
+| `GET/POST` | `/api/vote` | 투표 조회/토글 | IP 기반 |
 
-## 배포 구조
+## 기술 스택
 
+| 카테고리 | 기술 |
+|---------|------|
+| Framework | Next.js 16 (App Router, Edge Runtime) |
+| Language | TypeScript |
+| Styling | Tailwind CSS 4 |
+| UI | shadcn/ui (base-ui) |
+| Database | Supabase (PostgreSQL + RLS) |
+| AI | Claude API (분류/요약) |
+| Deployment | Cloudflare Pages (via next-on-pages + wrangler) |
+| CAPTCHA | Cloudflare Turnstile |
+
+## 환경변수
+
+| 변수 | 설명 | 필수 |
+|------|------|------|
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase URL | Yes |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon key | Yes |
+| `SUPABASE_SERVICE_ROLE_KEY` | Service role key (서버) | Yes |
+| `ANTHROPIC_API_KEY` | Claude API key (AI 분류) | No (없으면 기본 분류) |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Turnstile 사이트 키 | Yes |
+| `TURNSTILE_SECRET_KEY` | Turnstile 시크릿 키 | Yes |
+
+## 배포
+
+```bash
+cd /Users/max/Desktop/agent/side-projects/solveit
+npm run build
+npx @cloudflare/next-on-pages
+npx wrangler pages deploy .vercel/output/static --project-name solveit --commit-dirty=true
 ```
-[개발] localhost:3000 (npm run dev)
-   ↓ git push
-[빌드] Vercel CI (npm run build)
-   ↓ 자동 배포
-[프로덕션] solveit.vercel.app
-   ↓ API calls
-[DB] Supabase (PostgreSQL + RLS)
-```
 
-- **Preview**: PR마다 Vercel 프리뷰 배포
-- **Production**: main 브랜치 자동 배포
-- **DB**: Supabase 원격 프로젝트 (max가 생성 예정)
+## 제약사항
+- **Edge Runtime 전용**: 모든 API route에 `export const runtime = "edge"` 필수
+- **Supabase SDK 미사용**: 직접 `fetch`로 REST API 호출
+- **RLS**: 읽기 정책만 공개, 쓰기는 service role key로
