@@ -24,9 +24,11 @@ export default function Home() {
           <br />
           {t("heroTitle3")}
         </h1>
-        <p className="text-base sm:text-lg text-neutral-400 max-w-lg mx-auto">
-          {t("heroDesc")}
-        </p>
+        {t("heroDesc") && (
+          <p className="text-base sm:text-lg text-neutral-400 max-w-lg mx-auto">
+            {t("heroDesc")}
+          </p>
+        )}
       </div>
 
       <div className="flex gap-4">

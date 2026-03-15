@@ -98,9 +98,11 @@ export default function AboutPage() {
         <h1 className="text-3xl sm:text-6xl font-bold tracking-tight whitespace-nowrap">
           {t("aboutHeroTitle")}
         </h1>
-        <p className="text-base sm:text-lg text-neutral-400 max-w-lg mx-auto whitespace-pre-line">
-          {t("aboutHeroDesc")}
-        </p>
+        {t("aboutHeroDesc") && (
+          <p className="text-base sm:text-lg text-neutral-400 max-w-lg mx-auto whitespace-pre-line">
+            {t("aboutHeroDesc")}
+          </p>
+        )}
       </section>
 
       {/* Story */}
