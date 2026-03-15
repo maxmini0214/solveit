@@ -45,7 +45,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
     localStorage.setItem(STORAGE_KEY, l);
   };
 
-  const t = (key: string) => (dict[lang] as Record<string, string>)[key] || key;
+  const t = (key: string) => (dict[lang] as Record<string, string>)[key] ?? key;
 
   // Prevent hydration mismatch: render nothing until client-side lang is resolved
   if (!mounted) {

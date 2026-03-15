@@ -26,19 +26,35 @@ declare global {
 function TurnstileWidget({ onToken }: { onToken: (token: string) => void }) {
   const ref = useRef<HTMLDivElement>(null);
   const widgetId = useRef<string | null>(null);
+  const [failed, setFailed] = useState(false);
+  const [retryCount, setRetryCount] = useState(0);
 
   useEffect(() => {
+    setFailed(false);
     const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAAACrF2FNC-kTFDfnn";
 
     const renderWidget = () => {
-      if (ref.current && window.turnstile && !widgetId.current) {
+      if (ref.current && window.turnstile) {
+        if (widgetId.current) {
+          window.turnstile.reset(widgetId.current);
+          widgetId.current = null;
+        }
         widgetId.current = window.turnstile.render(ref.current, {
           sitekey: siteKey,
-          callback: (token: string) => onToken(token),
+          callback: (token: string) => { setFailed(false); onToken(token); },
+          "error-callback": () => setFailed(true),
+          "expired-callback": () => { onToken(""); setFailed(true); },
           theme: "dark",
         });
       }
     };
+
+    // Timeout: if no token in 8s, show retry
+    const timer = setTimeout(() => {
+      if (!widgetId.current || ref.current?.querySelector("iframe") === null) {
+        setFailed(true);
+      }
+    }, 8000);
 
     if (window.turnstile) {
       renderWidget();
@@ -47,11 +63,27 @@ function TurnstileWidget({ onToken }: { onToken: (token: string) => void }) {
       script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
       script.async = true;
       script.onload = renderWidget;
+      script.onerror = () => setFailed(true);
       document.head.appendChild(script);
     }
-  }, [onToken]);
 
-  return <div ref={ref} className="mt-2" />;
+    return () => clearTimeout(timer);
+  }, [onToken, retryCount]);
+
+  return (
+    <div className="mt-2">
+      <div ref={ref} />
+      {failed && (
+        <button
+          type="button"
+          onClick={() => { widgetId.current = null; if (ref.current) ref.current.innerHTML = ""; setRetryCount(c => c + 1); }}
+          className="text-sm text-emerald-400 underline mt-2"
+        >
+          보안 인증 로딩 실패 — 다시 시도
+        </button>
+      )}
+    </div>
+  );
 }
 
 export default function SubmitPage() {
@@ -66,10 +98,6 @@ export default function SubmitPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!text.trim()) return;
-    if (!turnstileToken) {
-      setError(t("captchaError"));
-      return;
-    }
 
     setLoading(true);
     setError("");

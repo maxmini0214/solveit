@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { LangProvider } from "@/components/LangContext";
 import { LangToggle } from "@/components/LangToggle";
 import { NavLinks } from "@/components/NavLinks";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -54,7 +49,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-950 text-neutral-50 min-h-screen`}
+        className={`${geistMono.variable} antialiased bg-neutral-950 text-neutral-50 min-h-screen`}
+        style={{ fontFamily: "'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', sans-serif" }}
       >
         <LangProvider>
           <nav className="border-b border-neutral-800 px-6 py-4">

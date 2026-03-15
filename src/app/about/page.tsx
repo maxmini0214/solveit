@@ -110,13 +110,13 @@ export default function AboutPage() {
         </h2>
         <div className="space-y-4 text-neutral-300 leading-relaxed text-base sm:text-lg">
           <p>{t("aboutStoryP1")}</p>
-          {t("aboutStoryP2") && (
+          {t("aboutStoryP2") ? (
             <p className="text-neutral-500 text-sm sm:text-base italic">
               {t("aboutStoryP2")}
             </p>
-          )}
+          ) : null}
           <p>{t("aboutStoryP3")}</p>
-          <p className="text-emerald-400 font-semibold text-lg sm:text-xl">
+          <p className="text-emerald-400 font-semibold text-lg sm:text-xl whitespace-nowrap">
             {t("aboutStoryP4")}
           </p>
           <p className="text-neutral-400">{t("aboutStoryP5")}</p>
@@ -153,7 +153,7 @@ export default function AboutPage() {
         <div className="space-y-3 text-neutral-300 text-base sm:text-lg leading-relaxed">
           <p>{t("aboutValueP1")}</p>
           <p>{t("aboutValueP2")}</p>
-          <p className="text-emerald-400 font-semibold">
+          <p className="text-emerald-400 font-semibold whitespace-nowrap">
             {t("aboutValueP3")}
           </p>
         </div>

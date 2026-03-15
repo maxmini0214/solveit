@@ -6,6 +6,9 @@ export function NavLinks() {
   const { t } = useLang();
   return (
     <div className="flex gap-6 text-sm text-neutral-400">
+      <Link href="/about" className="hover:text-neutral-100 transition">
+        {t("navAbout")}
+      </Link>
       <Link href="/submit" className="hover:text-neutral-100 transition">
         {t("navSubmit")}
       </Link>
@@ -14,9 +17,6 @@ export function NavLinks() {
       </Link>
       <Link href="/solved" className="hover:text-neutral-100 transition">
         {t("navSolved")}
-      </Link>
-      <Link href="/about" className="hover:text-neutral-100 transition">
-        {t("navAbout")}
       </Link>
     </div>
   );
