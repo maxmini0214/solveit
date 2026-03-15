@@ -93,8 +93,8 @@ export async function POST(req: NextRequest) {
     if (!text || text.length < 5) {
       return NextResponse.json({ error: "Too short (min 5 chars)" }, { status: 400 });
     }
-    if (text.length > 2000) {
-      return NextResponse.json({ error: "Too long (max 2000 chars)" }, { status: 400 });
+    if (text.length > 5000) {
+      return NextResponse.json({ error: "Too long (max 5000 chars)" }, { status: 400 });
     }
 
     // 2. Turnstile captcha verification

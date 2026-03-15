@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useLang } from "@/components/LangContext";
+import MarkdownContent from "@/components/MarkdownContent";
 
 interface Submission {
   id: string;
@@ -100,9 +101,9 @@ export default function SubmissionDetail() {
       <Card className="border-neutral-800 bg-neutral-900/50">
         <CardHeader>
           <div className="flex items-start justify-between gap-4">
-            <CardTitle className="text-lg font-normal leading-relaxed flex-1">
-              {submission.text}
-            </CardTitle>
+            <div className="flex-1">
+              <MarkdownContent content={submission.text} />
+            </div>
             <button
               onClick={handleVote}
               className={`flex flex-col items-center gap-1 min-w-[60px] px-3 py-2 rounded-lg border transition cursor-pointer ${

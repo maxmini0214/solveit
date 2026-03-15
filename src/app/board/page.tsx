@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { useLang } from "@/components/LangContext";
+import MarkdownContent from "@/components/MarkdownContent";
 
 interface Submission {
   id: string;
@@ -266,8 +267,8 @@ export default function BoardPage() {
                 <CardHeader className="pb-2">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 min-w-0">
-                      <CardTitle className="text-base font-normal leading-relaxed line-clamp-3">
-                        {sub.text}
+                      <CardTitle className="text-base font-normal leading-relaxed line-clamp-3 overflow-hidden">
+                        <MarkdownContent content={sub.text} compact />
                       </CardTitle>
                     </div>
                     <button

@@ -139,6 +139,7 @@ export default function SubmitPage() {
                 required
               />
               <p className="text-xs text-neutral-500">{t("frustrationHint")}</p>
+              <p className="text-xs text-neutral-600">{t("markdownHint")}</p>
             </div>
 
             <div className="space-y-2">
