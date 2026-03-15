@@ -15,6 +15,9 @@ export function NavLinks() {
       <Link href="/solved" className="hover:text-neutral-100 transition">
         {t("navSolved")}
       </Link>
+      <Link href="/about" className="hover:text-neutral-100 transition">
+        {t("navAbout")}
+      </Link>
     </div>
   );
 }
