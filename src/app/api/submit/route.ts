@@ -161,6 +161,7 @@ export async function GET(req: NextRequest) {
 
     const sortParam = url.searchParams.get("sort");
     const order = sortParam === "votes" ? "votes.desc,created_at.desc" : "created_at.desc";
+    const email = url.searchParams.get("email");
 
     let endpoint = `${SUPABASE_URL}/rest/v1/submissions?select=id,text,status,votes,created_at&order=${order}&limit=${limit}&offset=${offset}`;
 
@@ -168,7 +169,15 @@ export async function GET(req: NextRequest) {
       endpoint += `&text=ilike.*${encodeURIComponent(search)}*`;
     }
 
-    const res = await fetch(endpoint, { headers: anonHeaders() });
+    if (email) {
+      endpoint += `&email=eq.${encodeURIComponent(email)}`;
+    }
+
+    // Use service key when filtering by email (email column is private)
+    const headers = email && SERVICE_KEY
+      ? { "apikey": SERVICE_KEY, "Authorization": `Bearer ${SERVICE_KEY}`, "Prefer": "count=exact" }
+      : anonHeaders();
+    const res = await fetch(endpoint, { headers });
 
     if (!res.ok) {
       return NextResponse.json({ error: "DB fetch failed" }, { status: 500 });

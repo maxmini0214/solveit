@@ -41,12 +41,11 @@ export default function BoardPage() {
   const [searchInput, setSearchInput] = useState("");
   const [votedIds, setVotedIds] = useState<Set<string>>(new Set());
   const [emailSearch, setEmailSearch] = useState("");
-  const [emailResults, setEmailResults] = useState<Submission[] | null>(null);
-  const [emailLoading, setEmailLoading] = useState(false);
+  const [emailFilter, setEmailFilter] = useState("");
   const [showEmailSearch, setShowEmailSearch] = useState(false);
 
   const fetchSubmissions = useCallback(
-    async (s: SortMode, p: number, q: string) => {
+    async (s: SortMode, p: number, q: string, email?: string) => {
       setLoading(true);
       try {
         const params = new URLSearchParams({
@@ -54,6 +53,7 @@ export default function BoardPage() {
           sort: s === "votes" ? "votes" : "newest",
         });
         if (q) params.set("q", q);
+        if (email) params.set("email", email);
         const res = await fetch(`/api/submit?${params}`, { cache: "no-store" });
         const data: ApiResponse = await res.json();
         setSubmissions(data.items || []);
@@ -75,8 +75,8 @@ export default function BoardPage() {
   }, []);
 
   useEffect(() => {
-    fetchSubmissions(sort, page, search);
-  }, [fetchSubmissions, sort, page, search]);
+    fetchSubmissions(sort, page, search, emailFilter);
+  }, [fetchSubmissions, sort, page, search, emailFilter]);
 
   const handleSortChange = (s: SortMode) => {
     setSort(s);
@@ -131,33 +131,29 @@ export default function BoardPage() {
       <div>
         <button
           onClick={() => {
-            setShowEmailSearch(!showEmailSearch);
-            setEmailResults(null);
+            const next = !showEmailSearch;
+            setShowEmailSearch(next);
+            if (!next) {
+              setEmailFilter("");
+              setEmailSearch("");
+              setPage(1);
+            }
           }}
-          className="text-sm text-neutral-500 hover:text-emerald-400 transition cursor-pointer"
+          className={`text-sm transition cursor-pointer ${
+            emailFilter ? "text-emerald-400" : "text-neutral-500 hover:text-emerald-400"
+          }`}
         >
-          📧 {t("mySubmissions")}
+          📧 {t("mySubmissions")} {emailFilter && `(${emailFilter})`}
         </button>
         {showEmailSearch && (
           <div className="mt-3 p-4 rounded-lg border border-neutral-800 bg-neutral-900/50">
             <p className="text-xs text-neutral-500 mb-2">{t("mySubmissionsDesc")}</p>
             <form
-              onSubmit={async (e) => {
+              onSubmit={(e) => {
                 e.preventDefault();
                 if (!emailSearch.trim()) return;
-                setEmailLoading(true);
-                try {
-                  const res = await fetch("/api/my-submissions", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ email: emailSearch }),
-                  });
-                  const data = await res.json();
-                  setEmailResults(Array.isArray(data) ? data : data.items || []);
-                } catch {
-                  setEmailResults([]);
-                }
-                setEmailLoading(false);
+                setEmailFilter(emailSearch.trim());
+                setPage(1);
               }}
               className="flex gap-2"
             >
@@ -170,32 +166,24 @@ export default function BoardPage() {
               />
               <button
                 type="submit"
-                disabled={emailLoading}
-                className="px-3 py-1.5 rounded-lg bg-emerald-500/20 border border-emerald-500/50 text-emerald-400 text-sm hover:bg-emerald-500/30 transition cursor-pointer disabled:opacity-50"
+                className="px-3 py-1.5 rounded-lg bg-emerald-500/20 border border-emerald-500/50 text-emerald-400 text-sm hover:bg-emerald-500/30 transition cursor-pointer"
               >
-                {emailLoading ? "..." : t("mySubmissionsButton")}
+                {t("mySubmissionsButton")}
               </button>
+              {emailFilter && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setEmailFilter("");
+                    setEmailSearch("");
+                    setPage(1);
+                  }}
+                  className="px-3 py-1.5 rounded-lg border border-neutral-700 text-neutral-400 text-sm hover:border-red-500 hover:text-red-400 transition cursor-pointer"
+                >
+                  ✕
+                </button>
+              )}
             </form>
-            {emailResults !== null && (
-              <div className="mt-3 space-y-2">
-                {emailResults.length === 0 ? (
-                  <p className="text-sm text-neutral-500">😶 {t("noResults")}</p>
-                ) : (
-                  emailResults.map((sub) => (
-                    <div
-                      key={sub.id}
-                      onClick={() => router.push(`/board/${sub.id}`)}
-                      className="p-3 rounded-lg border border-neutral-800 hover:border-neutral-600 cursor-pointer transition"
-                    >
-                      <p className="text-sm line-clamp-2">{sub.text}</p>
-                      <p className="text-xs text-neutral-500 mt-1">
-                        👍 {sub.votes} · {new Date(sub.created_at).toLocaleDateString()}
-                      </p>
-                    </div>
-                  ))
-                )}
-              </div>
-            )}
           </div>
         )}
       </div>
