@@ -21,6 +21,29 @@ export const metadata: Metadata = {
   description:
     "Share your everyday frustrations. AI prioritizes them. We build real solutions. Track progress and get notified when your problem is solved.",
   keywords: ["solve", "problems", "build", "feedback", "frustration", "solutions"],
+  metadataBase: new URL("https://solveit.ai.kr"),
+  openGraph: {
+    title: "SolveIt — Tell us what bugs you. We'll build a fix.",
+    description:
+      "Share your everyday frustrations. AI prioritizes them. We build real solutions.",
+    url: "https://solveit.ai.kr",
+    siteName: "SolveIt",
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SolveIt — Tell us what bugs you. We'll build a fix.",
+    description:
+      "Share your everyday frustrations. AI prioritizes them. We build real solutions.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://solveit.ai.kr",
+  },
 };
 
 export default function RootLayout({

@@ -5,8 +5,8 @@
 
 ## 🔴 즉시 (구조 잡은 직후)
 
-- [ ] **Rate Limit 영속화** — 현재 Edge 메모리 = 사실상 무효. Cloudflare KV 또는 Supabase로 IP별 카운트 영속 저장. 전 세계 엣지 노드에서 동일하게 적용되어야 함.
-- [ ] **DB 마이그레이션 시스템** — 어떤 SQL이 언제 실행됐는지 추적 불가. `migrations/` 디렉토리에 번호별 SQL 파일 관리. 실행 이력 테이블(`schema_migrations`) 추가.
+- [x] **Rate Limit 영속화** — ✅ DB 기반 구현 완료. Supabase submissions 테이블에서 IP별 10분간 5건 제한. `checkDbRateLimit()` in `src/app/api/submit/route.ts`.
+- [x] **DB 마이그레이션 시스템** — ✅ `migrations/` 디렉토리 + `schema_migrations` 테이블 + `scripts/migrate.js` 러너 구축 완료.
 
 ## 🟡 이번 주
 

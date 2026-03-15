@@ -17,14 +17,14 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[70vh] text-center gap-8">
       <div className="space-y-4 max-w-2xl">
-        <h1 className="text-5xl sm:text-6xl font-bold tracking-tight">
+        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight whitespace-nowrap">
           {t("heroTitle1")}
           <span className="text-emerald-400">{t("heroHighlight")}</span>
           {t("heroTitle2")}
           <br />
           {t("heroTitle3")}
         </h1>
-        <p className="text-lg text-neutral-400 max-w-lg mx-auto">
+        <p className="text-base sm:text-lg text-neutral-400 max-w-lg mx-auto">
           {t("heroDesc")}
         </p>
       </div>
