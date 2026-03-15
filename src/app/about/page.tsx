@@ -91,18 +91,11 @@ export default function AboutPage() {
     },
   ];
 
-  const steps = [
-    { emoji: "💬", titleKey: "step1Title", descKey: "step1Desc" },
-    { emoji: "🤖", titleKey: "step2Title", descKey: "step2Desc" },
-    { emoji: "🛠️", titleKey: "step3Title", descKey: "step3Desc" },
-    { emoji: "📬", titleKey: "step4Title", descKey: "step4Desc" },
-  ];
-
   return (
     <div className="flex flex-col items-center gap-20 py-8 sm:py-16 px-4">
       {/* Hero */}
       <section className="text-center space-y-4 max-w-2xl">
-        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight">
+        <h1 className="text-3xl sm:text-6xl font-bold tracking-tight whitespace-nowrap">
           {t("aboutHeroTitle")}
         </h1>
         <p className="text-base sm:text-lg text-neutral-400 max-w-lg mx-auto whitespace-pre-line">
@@ -117,9 +110,11 @@ export default function AboutPage() {
         </h2>
         <div className="space-y-4 text-neutral-300 leading-relaxed text-base sm:text-lg">
           <p>{t("aboutStoryP1")}</p>
-          <p className="text-neutral-500 text-sm sm:text-base italic">
-            {t("aboutStoryP2")}
-          </p>
+          {t("aboutStoryP2") && (
+            <p className="text-neutral-500 text-sm sm:text-base italic">
+              {t("aboutStoryP2")}
+            </p>
+          )}
           <p>{t("aboutStoryP3")}</p>
           <p className="text-emerald-400 font-semibold text-lg sm:text-xl">
             {t("aboutStoryP4")}
@@ -142,28 +137,6 @@ export default function AboutPage() {
               <div className="text-2xl">{d.emoji}</div>
               <h3 className="font-semibold text-lg">{t(d.titleKey)}</h3>
               <p className="text-sm text-neutral-400">{t(d.descKey)}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section className="w-full max-w-3xl space-y-6">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center">
-          {t("aboutHowTitle")}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-          {steps.map((step, i) => (
-            <div
-              key={step.titleKey}
-              className="text-center space-y-2 p-4 rounded-xl border border-neutral-800 bg-neutral-900/50 relative"
-            >
-              <div className="absolute -top-3 -left-1 text-xs bg-emerald-500/20 text-emerald-400 rounded-full w-6 h-6 flex items-center justify-center font-bold">
-                {i + 1}
-              </div>
-              <div className="text-3xl">{step.emoji}</div>
-              <h3 className="font-semibold">{t(step.titleKey)}</h3>
-              <p className="text-sm text-neutral-400">{t(step.descKey)}</p>
             </div>
           ))}
         </div>
