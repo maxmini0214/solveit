@@ -1,0 +1,175 @@
+{
+  "collected_at": "2026-03-16T00:25:00+09:00",
+  "area": "판교",
+  "total_cafes": 7,
+  "cafes": [
+    {
+      "cafe_name": "플링크 커피 판교",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/jinjinjw/223846081250"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "자리마다 콘센트 마련",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "노트북 작업하시는 분들 많음",
+        "size": "medium",
+        "size_note": "바 테이블, 2인용, 4인용, 단체 테이블",
+        "late_night": false,
+        "address": "경기 성남시 분당구 판교역로 166 1층 12호",
+        "hours": "매일 08:00-20:00",
+        "kagong_score": 5,
+        "special": "서울 3대 크루아상, 카카오 아지트 1층, 아메리카노 5,000원, 페이스트리 맛집"
+      }
+    },
+    {
+      "cafe_name": "더노벰버라운지 판교운중점",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://quicktopic.tistory.com/entry/판교-작업-노트북-카페-추천-여기-4곳은-일단-저장해야-함-2025"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용하고 고급스러운 모던 인테리어",
+        "size": "large",
+        "size_note": "1인 소파, 테이블석, 2층 작업 테이블 추천",
+        "late_night": true,
+        "address": "판교 운중동",
+        "hours": "24시간 (새벽 2시 이후 주문 불가, 라운지는 24시간)",
+        "kagong_score": 5,
+        "special": "24시간 운영, 프리미엄 인테리어, 아메리카노 6,000원, 독서/업무 최적화"
+      }
+    },
+    {
+      "cafe_name": "콜렉티보 판교테크원점",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://quicktopic.tistory.com/entry/판교-작업-노트북-카페-추천-여기-4곳은-일단-저장해야-함-2025"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "고급스러운 인테리어, 조용한 업무 환경",
+        "size": "large",
+        "size_note": "넓은 층고, 테이블 간격 적당, 창가 자연 채광",
+        "late_night": null,
+        "address": "판교역 인접",
+        "hours": null,
+        "kagong_score": 5,
+        "special": "테크 기업인들의 아지트, 아메리카노 4,500원, 무료 주차장, 주말 혼잡"
+      }
+    },
+    {
+      "cafe_name": "자유의지",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://quicktopic.tistory.com/entry/판교-작업-노트북-카페-추천-여기-4곳은-일단-저장해야-함-2025"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "인더스트리얼 감성, 로스팅 현장 관찰 가능",
+        "size": "medium",
+        "size_note": "통유리 자연 채광",
+        "late_night": null,
+        "address": "판교",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "로스터리 카페, 드립커피 6,500원, 별점 4.8/5, 인근 유료 주차장"
+      }
+    },
+    {
+      "cafe_name": "까치화방",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/cycy15/223555948329"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": "조용한 카페",
+        "size": "large",
+        "size_note": "판교역 대형 카페",
+        "late_night": null,
+        "address": "판교역 인근",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "체리빙수 맛집, 호텔st 빙수 가성비"
+      }
+    },
+    {
+      "cafe_name": "스테드패스트 판교",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/dbwlsdk0813/224210375203"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "생각보다 넓고 큼",
+        "late_night": null,
+        "address": "판교 (주변 공영주차장 이용)",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "대형 카페, 데이트/작업 다목적"
+      }
+    },
+    {
+      "cafe_name": "오픈커피 백현동",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/kddkk_/224204408231"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "시끄럽지 않으면서 너무 정적이지도 않은 밸런스",
+        "size": "large",
+        "size_note": "1층+2층, 자리 넓음",
+        "late_night": null,
+        "address": "판교 백현동 카페거리",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "디저트 맛집, 카공 밸런스 좋음, 작곡하러 온 사람도 봄"
+      }
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "collected_at": "2026-03-16T00:25:00+09:00",
+  "area": "정자",
+  "total_cafes": 7,
+  "cafes": [
+    {
+      "cafe_name": "엑성프로방스",
+      "area": "정자",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/jomi-jomi/223652942047",
+        "https://m.blog.naver.com/bopull_/223796376283"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "문어발 코드까지 준비, 카공 판을 깔아줌",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "2층 위층은 카공 추천, 1층은 대화/모임",
+        "size": "large",
+        "size_note": "2층 구조, 테라스, 단체석",
+        "late_night": true,
+        "address": "경기 성남시 분당구 정자일로 197 2층",
+        "hours": "11:30-03:00 (라스트오더 02:30)",
+        "kagong_score": 5,
+        "special": "새벽 3시까지 운영, 주차 3시간 무료 (푸르지오시티2차 지하1층), 하이볼/와인도 판매"
+      }
+    },
+    {
+      "cafe_name": "헬싱키",
+      "area": "정자",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/jngs10000/223464933259",
+        "https://m.blog.naver.com/jngs10000/clip/4637078"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": null,
+        "size_note": null,
+        "late_night": true,
+        "address": "정자동 카페골목, 정자역 도보 3분",
+        "hours": "매일 11:00-24:00 (연중무휴)",
+        "kagong_score": 4,
+        "special": "에끌레어/디저트 맛집, 소개팅/데이트/카공 다목적, 자정까지"
+      }
+    },
+    {
+      "cafe_name": "카페 담",
+      "area": "정자",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/26763539/223096072690",
+        "https://kr.trip.com/moments/detail/seongnam-121856-126895078/"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "좌석마다 분위기 다름",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "내부 조용한 편, 혼자 노트북/공부 적합",
+        "size": "large",
+        "size_note": "대형 카페, 다양한 좌석/공간",
+        "late_night": true,
+        "address": "경기 성남시 분당구 불정로 7 벤츠건물 1층",
+        "hours": "평일 09:00-23:30, 주말 10:00-23:30",
+        "kagong_score": 4,
+        "special": "벤츠건물 1층, 아지트 같은 숨은 좌석, 애견동반 가능"
+      }
+    },
+    {
+      "cafe_name": "댓이즈커피",
+      "area": "정자",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/dbswn3231/223718945104"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": "은은한 우드톤, 따뜻한 분위기",
+        "size": "medium",
+        "size_note": "유럽느낌 외관",
+        "late_night": null,
+        "address": "정자역 인근 (아파트 단지 가까움)",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "테라스 예쁨, 우드톤 인테리어"
+      }
+    },
+    {
+      "cafe_name": "골든클락",
+      "area": "정자",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/mj1202s/223897469510"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용하고 편안한 분위기",
+        "size": null,
+        "size_note": null,
+        "late_night": null,
+        "address": "정자역에서 약 740m",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "브런치 메뉴, 근처 숨은 맛집 많음"
+      }
+    },
+    {
+      "cafe_name": "제너럴스토어",
+      "area": "정자",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/jyw5667/223503771120"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "북적이지 않아 조용히 책 읽거나 공부하기 좋음",
+        "size": null,
+        "size_note": null,
+        "late_night": null,
+        "address": "정자동",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "휘낭시에 맛집, 커피 가성비, 조용한 분위기"
+      }
+    },
+    {
+      "cafe_name": "카페 더고",
+      "area": "정자",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/kalynn/224194688649"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": null,
+        "size_note": null,
+        "late_night": false,
+        "address": "경기 성남시 분당구 느티로 22 1층 112호",
+        "hours": "매일 09:30-21:00",
+        "kagong_score": 3,
+        "special": "혼다를 품은 카페, 정자역 5번 출구 바로 앞, 발렛파킹/무료주차, 시승 서비스"
+      }
+    }
+  ]
+}

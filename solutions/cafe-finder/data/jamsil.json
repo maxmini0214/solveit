@@ -1,0 +1,127 @@
+{
+  "collected_at": "2026-03-16T00:25:00+09:00",
+  "area": "잠실",
+  "total_cafes": 5,
+  "cafes": [
+    {
+      "cafe_name": "나루터",
+      "area": "잠실",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/assert3542/223812234837"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "콘센트가 많은 점이 노트북 유저에게 최고 장점",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "아늑함, 집중력 올라가는 분위기",
+        "size": "medium",
+        "size_note": "좌석 간격 여유",
+        "late_night": null,
+        "address": "잠실역 인근",
+        "hours": null,
+        "kagong_score": 5,
+        "special": "메뉴 퀄리티 대만족, 나만 알고 싶은 카페"
+      }
+    },
+    {
+      "cafe_name": "브루브루",
+      "area": "잠실",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/0530juhyun"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "대부분의 자리마다 콘센트와 스탠드",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "1,2층과 다른 어둡고 조용한 분위기(상층)",
+        "size": "large",
+        "size_note": "대형 카페, 다층",
+        "late_night": true,
+        "address": "송파나루역 근처 (송리단길)",
+        "hours": "24시간",
+        "kagong_score": 5,
+        "special": "24시 대형 카페, 케이크/베이글 맛있음, 잠실 카공 카페 1순위"
+      }
+    },
+    {
+      "cafe_name": "스타벅스 잠실롯데월드몰점",
+      "area": "잠실",
+      "mention_count": 1,
+      "sources": [
+        "https://search.naver.com/search.naver?where=blog&query=잠실+카공+카페"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "비교적 많은 콘센트",
+        "has_wifi": true,
+        "wifi_fast": true,
+        "noise_level": "moderate",
+        "noise_note": "프랜차이즈 특유의 안정적 분위기",
+        "size": "large",
+        "size_note": "롯데월드몰 내 대형",
+        "late_night": false,
+        "address": "잠실 롯데월드몰 내",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "접근성 최고, 롯데월드몰 주차 가능"
+      }
+    },
+    {
+      "cafe_name": "투썸플레이스 잠실점",
+      "area": "잠실",
+      "mention_count": 1,
+      "sources": [
+        "https://search.naver.com/search.naver?where=blog&query=잠실+카공+카페"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": null,
+        "size": "medium",
+        "size_note": null,
+        "late_night": false,
+        "address": "잠실역 인근",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "프랜차이즈, 안정적 서비스"
+      }
+    },
+    {
+      "cafe_name": "이디야 잠실점",
+      "area": "잠실",
+      "mention_count": 1,
+      "sources": [
+        "https://search.naver.com/search.naver?where=blog&query=잠실+카공+카페"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": null,
+        "size": "medium",
+        "size_note": null,
+        "late_night": false,
+        "address": "잠실역 인근",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "가성비 좋은 프랜차이즈"
+      }
+    }
+  ]
+}

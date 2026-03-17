@@ -1,0 +1,204 @@
+{
+  "collected_at": "2026-03-16T00:25:00+09:00",
+  "area": "신촌",
+  "total_cafes": 8,
+  "cafes": [
+    {
+      "cafe_name": "분더커피바 신촌분점",
+      "area": "신촌",
+      "mention_count": 4,
+      "sources": [
+        "https://m.blog.naver.com/queen_sunduk/224035896993",
+        "https://m.blog.naver.com/sgh280/clip/10322046",
+        "https://m.blog.naver.com/ming_01680/clip/11564094",
+        "https://m.blog.naver.com/kha12_/clip/10017238"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "2층 콘센트 있는 좌석",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "1층 수다 공간, 2층 카공/노트북 공간",
+        "size": "medium",
+        "size_note": "1층+2층, 2024년 3월 오픈",
+        "late_night": null,
+        "address": "서울 서대문구 (신촌역 인근)",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "카이막 맛집, 바나나브륄레, 부천 역곡 본점에서 분점"
+      }
+    },
+    {
+      "cafe_name": "트리클",
+      "area": "신촌",
+      "mention_count": 3,
+      "sources": [
+        "https://m.blog.naver.com/vinus122/224044935080",
+        "https://m.blog.naver.com/nicknamecool/223885524142",
+        "https://m.blog.naver.com/soo_0221/223588662642"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "콘센트 많고 좌석도 편한 편",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용하고 감성적인 공간",
+        "size": "medium",
+        "size_note": "1층~2층",
+        "late_night": false,
+        "address": "서울 서대문구 창천동 30-8 1층-2층",
+        "hours": "매일 12:30-22:00 연중무휴",
+        "kagong_score": 5,
+        "special": "호주식 에스프레소 전문점, 커피맛 깔끔, 토스트+잼 제공"
+      }
+    },
+    {
+      "cafe_name": "마리드 로얄 밀크티",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/turtle_travel/224180185119"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "구석구석 콘센트 배치",
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "확실히 조용해서 공부하기 좋음",
+        "size": "medium",
+        "size_note": "다락방 같은 아늑한 공간, 유럽풍 인테리어",
+        "late_night": false,
+        "address": "이대/연대 근처",
+        "hours": "연중무휴 11:00-22:00",
+        "kagong_score": 4,
+        "special": "밀크티 전문, 독자적 밀크티 기법, 당도 0~100 조절, 빈티지 찻잔 판매"
+      }
+    },
+    {
+      "cafe_name": "프롬하츠커피 신촌점",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/hgpg00/223243388359"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "3층짜리 건물 전체 사용 (지하1~지상3)",
+        "late_night": false,
+        "address": "서울 서대문구 연세로12길 19 1층",
+        "hours": "매일 10:00-22:30",
+        "kagong_score": 4,
+        "special": "2호선/경의중앙선 신촌역 사이 위치, 건물 전체 카페"
+      }
+    },
+    {
+      "cafe_name": "카페앤",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/mama2807/clip/7088102"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 카페",
+        "size": null,
+        "size_note": null,
+        "late_night": true,
+        "address": "신촌역 인근",
+        "hours": "24시간",
+        "kagong_score": 4,
+        "special": "24시 운영, 야간 카공 가능"
+      }
+    },
+    {
+      "cafe_name": "바나프레소 신촌",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/alsdn811n/223566171836"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "5층 전체 건물, 층마다 좌석 다양",
+        "late_night": null,
+        "address": "신촌역 인근",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "5층 전체가 카페, 층별 좌석 다양, 가성비"
+      }
+    },
+    {
+      "cafe_name": "연플레이스",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/zhuyan_twdairy/224078868060"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 분위기 덕분에 집중 잘 됨",
+        "size": null,
+        "size_note": null,
+        "late_night": null,
+        "address": "신촌 (연세대 인근)",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "은행나무 시즌 창가석 특히 좋음"
+      }
+    },
+    {
+      "cafe_name": "신촌 브루스",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/binkong_2/223923703501"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": null,
+        "size_note": "창가 바테이블, 다닥다닥 붙어있지 않음",
+        "late_night": null,
+        "address": "신촌 (연대/이대 주변)",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "바테이블 카공, 팀플 가능, 바나나브레드"
+      }
+    }
+  ]
+}

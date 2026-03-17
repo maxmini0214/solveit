@@ -1,0 +1,156 @@
+{
+  "collected_at": "2026-03-16T00:25:00+09:00",
+  "area": "서현",
+  "total_cafes": 6,
+  "cafes": [
+    {
+      "cafe_name": "랑데자뷰 분당서현점",
+      "area": "서현",
+      "mention_count": 3,
+      "sources": [
+        "https://m.blog.naver.com/woobible_log/224127129750",
+        "https://m.blog.naver.com/jhk1534/224093596928",
+        "https://m.blog.naver.com/suda_zip/223985878075"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "감각적인 인테리어, 카공/모임 모두 가능",
+        "size": "large",
+        "size_note": "130평 규모 대형 카페",
+        "late_night": null,
+        "address": "서현역 인근",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "130평 대형, 인형뽑기 머신, 카공족~MZ 모두 포용"
+      }
+    },
+    {
+      "cafe_name": "인비저블커피 분당서현점",
+      "area": "서현",
+      "mention_count": 3,
+      "sources": [
+        "https://m.blog.naver.com/dj_mok/223264678519",
+        "https://m.blog.naver.com/bonasoobin/224147262382",
+        "https://m.blog.naver.com/saki0307/clip/9087562"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 분위기, 어두운 블랙톤 인테리어",
+        "size": "medium",
+        "size_note": "로스터리 카페",
+        "late_night": null,
+        "address": "경기 성남시 분당구 (서현역 인근)",
+        "hours": null,
+        "kagong_score": 5,
+        "special": "로스터리 카페, 블랙톤 무드, 원두 선택 가능 (고소한/산미), 주차 불가"
+      }
+    },
+    {
+      "cafe_name": "코지 카페",
+      "area": "서현",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/s_eni/223933072675"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "자리마다는 아니지만 콘센트 자리 꽤 많음",
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "한적하고 노트북 하기 좋음",
+        "size": "medium",
+        "size_note": "넓은 내부, 다양한 좌석, 포토존",
+        "late_night": false,
+        "address": "경기 성남시 분당구 황새울로 352",
+        "hours": "11:00-20:00 (월요일 휴무)",
+        "kagong_score": 4,
+        "special": "귀여운 인테리어, 아메리카노 5,000원, 서현역 5번 출구, 흡연실 내부"
+      }
+    },
+    {
+      "cafe_name": "젠젠",
+      "area": "서현",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/ggultang2578/223806588510"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "따뜻하고 아늑한 '쉼'이 있는 공간",
+        "size": "large",
+        "size_note": "대형 카공카페",
+        "late_night": null,
+        "address": "서현역 도보 거리",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "수플레 팬케이크 맛집, 홍차향 팬케이크, 초코 카페라떼"
+      }
+    },
+    {
+      "cafe_name": "굿웨더 서현점",
+      "area": "서현",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/darin0-0/224184512483"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "벽돌쪽 의자 밑에 콘센트",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "넓은 자리",
+        "late_night": null,
+        "address": "서현역 인근",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "디저트 카페, 영수증 사진기, 거울샷 포토존"
+      }
+    },
+    {
+      "cafe_name": "바나프레소 분당서현점",
+      "area": "서현",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/m_____mv09/224072870034",
+        "https://m.blog.naver.com/minzuria/224206671513"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 분위기, 공부하러 많이 옴",
+        "size": "large",
+        "size_note": "깔끔하고 쾌적, 키오스크 2대",
+        "late_night": true,
+        "address": "경기 성남시 분당구 분당로53번길 10 101호",
+        "hours": "매일 07:00-23:00 (라스트오더 22:30)",
+        "kagong_score": 4,
+        "special": "아침 7시 오픈, 밤 11시까지, 가성비, 다이어트 저당 메뉴"
+      }
+    }
+  ]
+}

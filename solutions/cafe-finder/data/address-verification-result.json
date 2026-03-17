@@ -1,0 +1,496 @@
+{
+  "summary": {
+    "match": 1,
+    "fixed": 8,
+    "not_found": 0,
+    "closed": 0,
+    "vague_fixed": 3
+  },
+  "verified_at": "2026-03-17 21:03:54",
+  "details": [
+    {
+      "index": 0,
+      "name": "셀렉티드닉스",
+      "status": "SKIPPED",
+      "csv_address": "서울 강남구 테헤란로4길 37",
+      "final_address": "서울 강남구 테헤란로4길 37"
+    },
+    {
+      "index": 1,
+      "name": "셀렉티드마롱",
+      "status": "SKIPPED",
+      "csv_address": "서울 강남구 강남대로94길 9",
+      "final_address": "서울 강남구 강남대로94길 9"
+    },
+    {
+      "index": 2,
+      "name": "필메이트",
+      "status": "SKIPPED",
+      "csv_address": "서울 강남구 테헤란로1길 28",
+      "final_address": "서울 강남구 테헤란로1길 28"
+    },
+    {
+      "index": 3,
+      "name": "베이커스트 브라운",
+      "status": "SKIPPED",
+      "csv_address": "서울 강남구 강남대로102길 21",
+      "final_address": "서울 강남구 강남대로102길 21"
+    },
+    {
+      "index": 4,
+      "name": "공차 강남본점",
+      "status": "SKIPPED",
+      "csv_address": "서울 강남구 강남대로 396",
+      "final_address": "서울 강남구 강남대로 396"
+    },
+    {
+      "index": 5,
+      "name": "에이비카페",
+      "status": "SKIPPED",
+      "csv_address": "서울 강남구 역삼동",
+      "final_address": "서울 강남구 역삼동"
+    },
+    {
+      "index": 6,
+      "name": "블리스라운드",
+      "status": "SKIPPED",
+      "csv_address": "서울 강남구 역삼동",
+      "final_address": "서울 강남구 역삼동"
+    },
+    {
+      "index": 7,
+      "name": "fyi 카페",
+      "status": "SKIPPED",
+      "csv_address": "서울 강남구 역삼로 180 마루180 1층",
+      "final_address": "서울 강남구 역삼로 180 마루180 1층"
+    },
+    {
+      "index": 8,
+      "name": "인포메이션 카페",
+      "status": "SKIPPED",
+      "csv_address": "서울 강남구 강남대로 390",
+      "final_address": "서울 강남구 강남대로 390"
+    },
+    {
+      "index": 9,
+      "name": "리퍼크",
+      "status": "SKIPPED",
+      "csv_address": "서울 강남구 강남대로 382",
+      "final_address": "서울 강남구 강남대로 382"
+    },
+    {
+      "index": 10,
+      "name": "콘하스 연남",
+      "status": "SKIPPED",
+      "csv_address": "서울 마포구 동교로41길 33",
+      "final_address": "서울 마포구 동교로41길 33"
+    },
+    {
+      "index": 11,
+      "name": "렉터스라운지 홍대",
+      "status": "SKIPPED",
+      "csv_address": "서울 마포구 와우산로29길 14",
+      "final_address": "서울 마포구 와우산로29길 14"
+    },
+    {
+      "index": 12,
+      "name": "ㅎㄷ카페",
+      "status": "SKIPPED",
+      "csv_address": "서울 마포구 어울마당로 68",
+      "final_address": "서울 마포구 어울마당로 68"
+    },
+    {
+      "index": 13,
+      "name": "COC",
+      "status": "SKIPPED",
+      "csv_address": "서울 마포구 동교로 188",
+      "final_address": "서울 마포구 동교로 188"
+    },
+    {
+      "index": 14,
+      "name": "카페꼼마 합정점",
+      "status": "SKIPPED",
+      "csv_address": "서울 마포구 양화로 45",
+      "final_address": "서울 마포구 양화로 45"
+    },
+    {
+      "index": 15,
+      "name": "작업실01",
+      "status": "SKIPPED",
+      "csv_address": "서울 마포구 홍익로2길 27-17 1층",
+      "final_address": "서울 마포구 홍익로2길 27-17 1층"
+    },
+    {
+      "index": 16,
+      "name": "헤이키커피 홍대연남점",
+      "status": "SKIPPED",
+      "csv_address": "서울 마포구 연남동",
+      "final_address": "서울 마포구 연남동"
+    },
+    {
+      "index": 17,
+      "name": "데이롱카페 홍대점",
+      "status": "SKIPPED",
+      "csv_address": "서울 마포구 홍대입구역 1번출구 인근",
+      "final_address": "서울 마포구 홍대입구역 1번출구 인근"
+    },
+    {
+      "index": 18,
+      "name": "분더커피바 신촌분점",
+      "status": "SKIPPED",
+      "csv_address": "서울 서대문구 연세로7길 22",
+      "final_address": "서울 서대문구 연세로7길 22"
+    },
+    {
+      "index": 19,
+      "name": "트리클",
+      "status": "SKIPPED",
+      "csv_address": "서울 서대문구 창천동 30-8 1층-2층",
+      "final_address": "서울 서대문구 창천동 30-8 1층-2층"
+    },
+    {
+      "index": 20,
+      "name": "마리드 로얄 밀크티",
+      "status": "SKIPPED",
+      "csv_address": "서울 서대문구 연세로5나길 20",
+      "final_address": "서울 서대문구 연세로5나길 20"
+    },
+    {
+      "index": 21,
+      "name": "프롬하츠커피 신촌점",
+      "status": "SKIPPED",
+      "csv_address": "서울 서대문구 연세로12길 19 1층",
+      "final_address": "서울 서대문구 연세로12길 19 1층"
+    },
+    {
+      "index": 22,
+      "name": "카페앤",
+      "status": "SKIPPED",
+      "csv_address": "서울 서대문구 신촌역 인근",
+      "final_address": "서울 서대문구 신촌역 인근"
+    },
+    {
+      "index": 23,
+      "name": "바나프레소 신촌",
+      "status": "SKIPPED",
+      "csv_address": "서울 서대문구 신촌역 인근",
+      "final_address": "서울 서대문구 신촌역 인근"
+    },
+    {
+      "index": 24,
+      "name": "연플레이스",
+      "status": "SKIPPED",
+      "csv_address": "서울 서대문구 연세로 일대",
+      "final_address": "서울 서대문구 연세로 일대"
+    },
+    {
+      "index": 25,
+      "name": "신촌 브루스",
+      "status": "SKIPPED",
+      "csv_address": "서울 서대문구 연세로 일대",
+      "final_address": "서울 서대문구 연세로 일대"
+    },
+    {
+      "index": 26,
+      "name": "본지르르 성수",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 서울숲2길 32-14",
+      "final_address": "서울 성동구 서울숲2길 32-14"
+    },
+    {
+      "index": 27,
+      "name": "피어커피 성수본점",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 광나루로4가길 24 1층",
+      "final_address": "서울 성동구 광나루로4가길 24 1층"
+    },
+    {
+      "index": 28,
+      "name": "카페 스밍 스튜디오",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 서울숲길 일대",
+      "final_address": "서울 성동구 서울숲길 일대"
+    },
+    {
+      "index": 29,
+      "name": "ddd (디디디)",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 연무장길 일대",
+      "final_address": "서울 성동구 연무장길 일대"
+    },
+    {
+      "index": 30,
+      "name": "하우스오브바이닐 성수점",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 아차산로7길 29 2층",
+      "final_address": "서울 성동구 아차산로7길 29 2층"
+    },
+    {
+      "index": 31,
+      "name": "이페메라",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 성수이로 일대",
+      "final_address": "서울 성동구 성수이로 일대"
+    },
+    {
+      "index": 32,
+      "name": "로우키",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 연무장길 일대",
+      "final_address": "서울 성동구 연무장길 일대"
+    },
+    {
+      "index": 33,
+      "name": "에어드랍커피 성수",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 성수이로 일대",
+      "final_address": "서울 성동구 성수이로 일대"
+    },
+    {
+      "index": 34,
+      "name": "성수지앵 서울숲점",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 서울숲2길 일대",
+      "final_address": "서울 성동구 서울숲2길 일대"
+    },
+    {
+      "index": 35,
+      "name": "포어플랜",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 연무장5가길 7",
+      "final_address": "서울 성동구 연무장5가길 7"
+    },
+    {
+      "index": 36,
+      "name": "LOOOP 베이커리 카페",
+      "status": "SKIPPED",
+      "csv_address": "서울 성동구 연무장5길 9-13",
+      "final_address": "서울 성동구 연무장5길 9-13"
+    },
+    {
+      "index": 37,
+      "name": "나루터",
+      "status": "SKIPPED",
+      "csv_address": "서울 송파구 잠실동",
+      "final_address": "서울 송파구 잠실동"
+    },
+    {
+      "index": 38,
+      "name": "브루브루",
+      "status": "SKIPPED",
+      "csv_address": "서울 송파구 송리단길 일대",
+      "final_address": "서울 송파구 송리단길 일대"
+    },
+    {
+      "index": 39,
+      "name": "스타벅스 잠실롯데월드몰점",
+      "status": "SKIPPED",
+      "csv_address": "서울 송파구 올림픽로 300 롯데월드몰",
+      "final_address": "서울 송파구 올림픽로 300 롯데월드몰"
+    },
+    {
+      "index": 40,
+      "name": "투썸플레이스 잠실점",
+      "status": "SKIPPED",
+      "csv_address": "서울 송파구 잠실역 인근",
+      "final_address": "서울 송파구 잠실역 인근"
+    },
+    {
+      "index": 41,
+      "name": "이디야 잠실점",
+      "status": "SKIPPED",
+      "csv_address": "서울 송파구 잠실역 인근",
+      "final_address": "서울 송파구 잠실역 인근"
+    },
+    {
+      "index": 42,
+      "name": "하우스서울",
+      "status": "SKIPPED",
+      "csv_address": "서울 송파구 올림픽로 424",
+      "final_address": "서울 송파구 올림픽로 424"
+    },
+    {
+      "index": 43,
+      "name": "VGG",
+      "status": "SKIPPED",
+      "csv_address": "서울 송파구 백제고분로 일대",
+      "final_address": "서울 송파구 백제고분로 일대"
+    },
+    {
+      "index": 44,
+      "name": "랑데자뷰 분당서현점",
+      "status": "SKIPPED",
+      "csv_address": "서울 성남시 분당구 서현역 인근",
+      "final_address": "서울 성남시 분당구 서현역 인근"
+    },
+    {
+      "index": 45,
+      "name": "인비저블커피 분당서현점",
+      "status": "SKIPPED",
+      "csv_address": "경기 성남시 분당구 서현역 인근",
+      "final_address": "경기 성남시 분당구 서현역 인근"
+    },
+    {
+      "index": 46,
+      "name": "코지 카페",
+      "status": "SKIPPED",
+      "csv_address": "경기 성남시 분당구 황새울로 352",
+      "final_address": "경기 성남시 분당구 황새울로 352"
+    },
+    {
+      "index": 47,
+      "name": "젠젠",
+      "status": "SKIPPED",
+      "csv_address": "경기 성남시 분당구 서현역 인근",
+      "final_address": "경기 성남시 분당구 서현역 인근"
+    },
+    {
+      "index": 48,
+      "name": "굿웨더 서현점",
+      "status": "SKIPPED",
+      "csv_address": "경기 성남시 분당구 서현역 인근",
+      "final_address": "경기 성남시 분당구 서현역 인근"
+    },
+    {
+      "index": 49,
+      "name": "바나프레소 분당서현점",
+      "status": "SKIPPED",
+      "csv_address": "경기 성남시 분당구 분당로53번길 10 101호",
+      "final_address": "경기 성남시 분당구 분당로53번길 10 101호"
+    },
+    {
+      "index": 50,
+      "name": "엑성프로방스",
+      "status": "SKIPPED",
+      "csv_address": "경기 성남시 분당구 정자일로 197 2층",
+      "final_address": "경기 성남시 분당구 정자일로 197 2층"
+    },
+    {
+      "index": 51,
+      "name": "헬싱키",
+      "status": "SKIPPED",
+      "csv_address": "경기 성남시 분당구 정자동 카페골목",
+      "final_address": "경기 성남시 분당구 정자동 카페골목"
+    },
+    {
+      "index": 52,
+      "name": "카페 담",
+      "area": "정자",
+      "csv_address": "경기 성남시 분당구 불정로 7 벤츠건물 1층",
+      "naver_address": "경기 성남시 분당구 불정로 7",
+      "is_closed": false,
+      "status": "MATCH",
+      "final_address": "경기 성남시 분당구 불정로 7 벤츠건물 1층"
+    },
+    {
+      "index": 53,
+      "name": "댓이즈커피",
+      "area": "정자",
+      "csv_address": "경기 성남시 분당구 정자역 인근",
+      "naver_address": "경기 성남시 분당구 내정로7번길 16-4",
+      "is_closed": false,
+      "status": "VAGUE_FIXED",
+      "final_address": "경기 성남시 분당구 내정로7번길 16-4"
+    },
+    {
+      "index": 54,
+      "name": "골든클락",
+      "area": "정자",
+      "csv_address": "경기 성남시 분당구 정자역 인근",
+      "naver_address": "경기 성남시 분당구 느티로87번길 10-1",
+      "is_closed": false,
+      "status": "VAGUE_FIXED",
+      "final_address": "경기 성남시 분당구 느티로87번길 10-1"
+    },
+    {
+      "index": 55,
+      "name": "제너럴스토어",
+      "area": "정자",
+      "csv_address": "경기 성남시 분당구 정자동",
+      "naver_address": "서울특별시 강남구 테헤란로98길 6-9",
+      "is_closed": false,
+      "status": "FIXED",
+      "final_address": "서울특별시 강남구 테헤란로98길 6-9"
+    },
+    {
+      "index": 56,
+      "name": "카페 더고",
+      "area": "정자",
+      "csv_address": "경기 성남시 분당구 느티로 22 1층 112호",
+      "naver_address": "경기도 성남시 분당구 느티로 22",
+      "is_closed": false,
+      "status": "FIXED",
+      "final_address": "경기도 성남시 분당구 느티로 22"
+    },
+    {
+      "index": 57,
+      "name": "플링크 커피 판교",
+      "area": "판교",
+      "csv_address": "경기 성남시 분당구 판교역로 166 1층 12호",
+      "naver_address": "경기도 성남시 분당구 판교역로 166",
+      "is_closed": false,
+      "status": "FIXED",
+      "final_address": "경기도 성남시 분당구 판교역로 166"
+    },
+    {
+      "index": 58,
+      "name": "더노벰버라운지 판교운중점",
+      "area": "판교",
+      "csv_address": "경기 성남시 분당구 운중동",
+      "naver_address": "경기 성남시 분당구 운종로 192",
+      "is_closed": false,
+      "status": "FIXED",
+      "final_address": "경기 성남시 분당구 운종로 192"
+    },
+    {
+      "index": 59,
+      "name": "콜렉티보 판교테크원점",
+      "area": "판교",
+      "csv_address": "경기 성남시 분당구 판교역 인접",
+      "naver_address": "경기 성남시 분당구 분당내곡로 131",
+      "is_closed": false,
+      "status": "FIXED",
+      "final_address": "경기 성남시 분당구 분당내곡로 131"
+    },
+    {
+      "index": 60,
+      "name": "자유의지",
+      "area": "판교",
+      "csv_address": "경기 성남시 분당구 판교",
+      "naver_address": "경기도 성남시 분당구 판교대장로7길 6-17",
+      "is_closed": false,
+      "status": "FIXED",
+      "final_address": "경기도 성남시 분당구 판교대장로7길 6-17"
+    },
+    {
+      "index": 61,
+      "name": "까치화방",
+      "area": "판교",
+      "csv_address": "경기 성남시 분당구 판교역 인근",
+      "naver_address": "경기도 성남시 분당구 판교역로 152",
+      "is_closed": false,
+      "status": "VAGUE_FIXED",
+      "final_address": "경기도 성남시 분당구 판교역로 152"
+    },
+    {
+      "index": 62,
+      "name": "스테드패스트 판교",
+      "area": "판교",
+      "csv_address": "경기 성남시 분당구 판교",
+      "naver_address": "경기도 성남시 분당구 판교공원로2길 22",
+      "is_closed": false,
+      "status": "FIXED",
+      "final_address": "경기도 성남시 분당구 판교공원로2길 22"
+    },
+    {
+      "index": 63,
+      "name": "오픈커피 백현동",
+      "area": "판교",
+      "csv_address": "경기 성남시 분당구 백현동 카페거리",
+      "naver_address": "경기 성남시 분당구 판교역로14번길 15",
+      "is_closed": false,
+      "status": "FIXED",
+      "final_address": "경기 성남시 분당구 판교역로14번길 15"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "collected_at": "2026-03-16T00:25:00+09:00",
+  "area": "홍대",
+  "total_cafes": 7,
+  "cafes": [
+    {
+      "cafe_name": "콘하스 연남",
+      "area": "홍대",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/gpwl98/224151768284",
+        "https://m.blog.naver.com/911dizzy/224192824257"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "콘센트 많음, 2층 카공존",
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "2층은 독서실 수준으로 고요, 1층은 적당한 백색소음",
+        "size": "large",
+        "size_note": "2층 구조, 인더스트리얼 감성",
+        "late_night": false,
+        "address": "홍대입구역 3번 출구 도보 2분",
+        "hours": null,
+        "kagong_score": 5,
+        "special": "2층 카공 천국, 디저트 다양, TWG 차 판매"
+      }
+    },
+    {
+      "cafe_name": "렉터스라운지 홍대",
+      "area": "홍대",
+      "mention_count": 2,
+      "sources": [
+        "https://kr.trip.com/moments/detail/hongdae-2135592-132479454/",
+        "https://m.blog.naver.com/trendtreat/clip/10333503"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "콘센트 자리 선점 필요",
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 분위기, 미니멀 인테리어",
+        "size": "large",
+        "size_note": "3층, 주택 개조, 룸처럼 공간분리",
+        "late_night": true,
+        "address": "서울 마포구 와우산로 29길 14",
+        "hours": "10:00-24:00",
+        "kagong_score": 5,
+        "special": "홍대 거의 유일 자정까지 카페, 직접 개발한 음료, 시나몬+히비스커스 믹스 시그니처"
+      }
+    },
+    {
+      "cafe_name": "ㅎㄷ카페",
+      "area": "홍대",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/han_asom/224006717350"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "층별 테마로 분위기 다름, 일부 층은 조용",
+        "size": "large",
+        "size_note": "9층 건물 통째로 카페, 층별 테마 (K-POP, LP, 갤러리, 식물원 등)",
+        "late_night": false,
+        "address": "서울 마포구 어울마당로 68",
+        "hours": "매일 11:00-21:00",
+        "kagong_score": 3,
+        "special": "9층 대형 테마 카페, 게이샤 원두 16,000원 가성비, K-POP미디어룸, 루프탑"
+      }
+    },
+    {
+      "cafe_name": "COC",
+      "area": "홍대",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/lovlov_ly/223944033134"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "홍대 메인 로드 반대편이라 비교적 조용",
+        "size": "medium",
+        "size_note": null,
+        "late_night": false,
+        "address": "홍대입구역 1번 출구 도보 10분 이내",
+        "hours": "10:00-22:00",
+        "kagong_score": 4,
+        "special": "라떼 맛집, 느좋 카페"
+      }
+    },
+    {
+      "cafe_name": "카페꼼마 합정점",
+      "area": "홍대",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/mintraveler/224140780269"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용하게 책 읽기 좋은 북카페",
+        "size": "large",
+        "size_note": "지하1층~6층 루프탑, 대형 북카페",
+        "late_night": null,
+        "address": "합정역 인근",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "대형 북카페, 독서+카공 병행"
+      }
+    },
+    {
+      "cafe_name": "작업실01",
+      "area": "홍대",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/mmuki/clip/11150308"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 카공 카페",
+        "size": "small",
+        "size_note": null,
+        "late_night": null,
+        "address": "서울 마포구 홍익로2길 27-17 1층",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "이름부터 작업 전용, 홍대입구역 인근"
+      }
+    },
+    {
+      "cafe_name": "헤이키커피 홍대연남점",
+      "area": "홍대",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/ppozzak_ing/223698927834"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": null,
+        "size_note": null,
+        "late_night": null,
+        "address": "연남동",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "가성비 카공 카페, 빵 맛집"
+      }
+    }
+  ]
+}

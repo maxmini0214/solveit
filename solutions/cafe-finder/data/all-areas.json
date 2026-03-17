@@ -1,0 +1,1326 @@
+{
+  "collected_at": "2026-03-16T00:30:00+09:00",
+  "total_areas": 8,
+  "total_cafes": 55,
+  "areas_summary": {
+    "강남": 7,
+    "홍대": 7,
+    "신촌": 8,
+    "성수": 8,
+    "잠실": 5,
+    "서현": 6,
+    "정자": 7,
+    "판교": 7
+  },
+  "cafes": [
+    {
+      "cafe_name": "셀렉티드닉스",
+      "area": "강남",
+      "mention_count": 3,
+      "sources": [
+        "https://m.blog.naver.com/bean423/223812234837",
+        "https://m.blog.naver.com/911dizzy/223925030963",
+        "https://m.blog.naver.com/kimarum47/224199693106"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "자리마다 콘센트, 3층 콘센트 넉넉",
+        "has_wifi": true,
+        "wifi_fast": true,
+        "noise_level": "quiet",
+        "noise_note": "8층 독서실 느낌, 3층 스터디 전용",
+        "size": "large",
+        "size_note": "지하1층~루프탑 (6개 층)",
+        "late_night": true,
+        "address": "서울 강남구 테헤란로4길 37",
+        "hours": "평일 08:00-24:00, 주말 11:00-24:00",
+        "kagong_score": 5,
+        "special": "티라미수 맛집, 루프탑, 8층 카공존, 주차 가능"
+      }
+    },
+    {
+      "cafe_name": "셀렉티드마롱",
+      "area": "강남",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/davi-kim/224034323850"
+      ],
+      "features": {
+        "has_outlet": true,
+        "has_wifi": true,
+        "noise_level": "quiet",
+        "noise_note": "소음이 적고 차분한 분위기",
+        "size": "large",
+        "late_night": null,
+        "address": "강남역 3번 출구 도보 5분",
+        "kagong_score": 4,
+        "special": "갤러리 감성, 루프탑 시티뷰"
+      }
+    },
+    {
+      "cafe_name": "필메이트",
+      "area": "강남",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/13275/223752303384"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "대부분 자리마다 콘센트",
+        "has_wifi": true,
+        "wifi_fast": true,
+        "noise_level": null,
+        "size": "large",
+        "size_note": "3층 규모",
+        "late_night": true,
+        "address": "서울 강남구 테헤란로1길 28",
+        "hours": "월-목,일 08:00-23:00, 금토 08:00-24:00",
+        "kagong_score": 4,
+        "special": "아침 8시 오픈, 화이트+우드 인테리어"
+      }
+    },
+    {
+      "cafe_name": "베이커스트 브라운",
+      "area": "강남",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/s980814_/223972457092"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": false,
+        "outlet_note": "콘센트 좌석 많지 않음",
+        "has_wifi": null,
+        "size": "large",
+        "size_note": "3층, 1인좌석 있음",
+        "late_night": false,
+        "address": "서울 강남구 강남대로102길 21",
+        "hours": "매일 11:00-22:30",
+        "kagong_score": 3,
+        "special": "프랑스산 버터 빵/브런치 맛집, 신논현역 인근"
+      }
+    },
+    {
+      "cafe_name": "공차 강남본점",
+      "area": "강남",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/sunshine0144/223781373000"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "테이블마다 콘센트",
+        "has_wifi": null,
+        "size": "large",
+        "kagong_score": 3,
+        "special": "1인 칸막이 자리, 피크타임 만석 주의"
+      }
+    },
+    {
+      "cafe_name": "에이비카페",
+      "area": "강남",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/xelloss3828/clip/7958818"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "size": "large",
+        "size_note": "지하2층~지상4층",
+        "late_night": true,
+        "hours": "24시간 (4층만 13:00-22:00)",
+        "kagong_score": 3,
+        "special": "발리 감성 인테리어, 24시간 운영"
+      }
+    },
+    {
+      "cafe_name": "블리스라운드",
+      "area": "강남",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/kdac4131/224206957942"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_note": "콘센트 위치 잘 배치",
+        "size": "large",
+        "size_note": "큼직한 테이블",
+        "address": "역삼역 인근",
+        "kagong_score": 3,
+        "special": "소금빵 맛집, 단체 모임 가능"
+      }
+    },
+    {
+      "cafe_name": "콘하스 연남",
+      "area": "홍대",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/gpwl98/224151768284",
+        "https://m.blog.naver.com/911dizzy/224192824257"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "콘센트 많음, 2층 카공존",
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "2층은 독서실 수준으로 고요, 1층은 적당한 백색소음",
+        "size": "large",
+        "size_note": "2층 구조, 인더스트리얼 감성",
+        "late_night": false,
+        "address": "홍대입구역 3번 출구 도보 2분",
+        "hours": null,
+        "kagong_score": 5,
+        "special": "2층 카공 천국, 디저트 다양, TWG 차 판매"
+      }
+    },
+    {
+      "cafe_name": "렉터스라운지 홍대",
+      "area": "홍대",
+      "mention_count": 2,
+      "sources": [
+        "https://kr.trip.com/moments/detail/hongdae-2135592-132479454/",
+        "https://m.blog.naver.com/trendtreat/clip/10333503"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "콘센트 자리 선점 필요",
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 분위기, 미니멀 인테리어",
+        "size": "large",
+        "size_note": "3층, 주택 개조, 룸처럼 공간분리",
+        "late_night": true,
+        "address": "서울 마포구 와우산로 29길 14",
+        "hours": "10:00-24:00",
+        "kagong_score": 5,
+        "special": "홍대 거의 유일 자정까지 카페, 직접 개발한 음료, 시나몬+히비스커스 믹스 시그니처"
+      }
+    },
+    {
+      "cafe_name": "ㅎㄷ카페",
+      "area": "홍대",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/han_asom/224006717350"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "층별 테마로 분위기 다름, 일부 층은 조용",
+        "size": "large",
+        "size_note": "9층 건물 통째로 카페, 층별 테마 (K-POP, LP, 갤러리, 식물원 등)",
+        "late_night": false,
+        "address": "서울 마포구 어울마당로 68",
+        "hours": "매일 11:00-21:00",
+        "kagong_score": 3,
+        "special": "9층 대형 테마 카페, 게이샤 원두 16,000원 가성비, K-POP미디어룸, 루프탑"
+      }
+    },
+    {
+      "cafe_name": "COC",
+      "area": "홍대",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/lovlov_ly/223944033134"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "홍대 메인 로드 반대편이라 비교적 조용",
+        "size": "medium",
+        "size_note": null,
+        "late_night": false,
+        "address": "홍대입구역 1번 출구 도보 10분 이내",
+        "hours": "10:00-22:00",
+        "kagong_score": 4,
+        "special": "라떼 맛집, 느좋 카페"
+      }
+    },
+    {
+      "cafe_name": "카페꼼마 합정점",
+      "area": "홍대",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/mintraveler/224140780269"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용하게 책 읽기 좋은 북카페",
+        "size": "large",
+        "size_note": "지하1층~6층 루프탑, 대형 북카페",
+        "late_night": null,
+        "address": "합정역 인근",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "대형 북카페, 독서+카공 병행"
+      }
+    },
+    {
+      "cafe_name": "작업실01",
+      "area": "홍대",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/mmuki/clip/11150308"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 카공 카페",
+        "size": "small",
+        "size_note": null,
+        "late_night": null,
+        "address": "서울 마포구 홍익로2길 27-17 1층",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "이름부터 작업 전용, 홍대입구역 인근"
+      }
+    },
+    {
+      "cafe_name": "헤이키커피 홍대연남점",
+      "area": "홍대",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/ppozzak_ing/223698927834"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": null,
+        "size_note": null,
+        "late_night": null,
+        "address": "연남동",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "가성비 카공 카페, 빵 맛집"
+      }
+    },
+    {
+      "cafe_name": "분더커피바 신촌분점",
+      "area": "신촌",
+      "mention_count": 4,
+      "sources": [
+        "https://m.blog.naver.com/queen_sunduk/224035896993",
+        "https://m.blog.naver.com/sgh280/clip/10322046",
+        "https://m.blog.naver.com/ming_01680/clip/11564094",
+        "https://m.blog.naver.com/kha12_/clip/10017238"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "2층 콘센트 있는 좌석",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "1층 수다 공간, 2층 카공/노트북 공간",
+        "size": "medium",
+        "size_note": "1층+2층, 2024년 3월 오픈",
+        "late_night": null,
+        "address": "서울 서대문구 (신촌역 인근)",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "카이막 맛집, 바나나브륄레, 부천 역곡 본점에서 분점"
+      }
+    },
+    {
+      "cafe_name": "트리클",
+      "area": "신촌",
+      "mention_count": 3,
+      "sources": [
+        "https://m.blog.naver.com/vinus122/224044935080",
+        "https://m.blog.naver.com/nicknamecool/223885524142",
+        "https://m.blog.naver.com/soo_0221/223588662642"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "콘센트 많고 좌석도 편한 편",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용하고 감성적인 공간",
+        "size": "medium",
+        "size_note": "1층~2층",
+        "late_night": false,
+        "address": "서울 서대문구 창천동 30-8 1층-2층",
+        "hours": "매일 12:30-22:00 연중무휴",
+        "kagong_score": 5,
+        "special": "호주식 에스프레소 전문점, 커피맛 깔끔, 토스트+잼 제공"
+      }
+    },
+    {
+      "cafe_name": "마리드 로얄 밀크티",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/turtle_travel/224180185119"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "구석구석 콘센트 배치",
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "확실히 조용해서 공부하기 좋음",
+        "size": "medium",
+        "size_note": "다락방 같은 아늑한 공간, 유럽풍 인테리어",
+        "late_night": false,
+        "address": "이대/연대 근처",
+        "hours": "연중무휴 11:00-22:00",
+        "kagong_score": 4,
+        "special": "밀크티 전문, 독자적 밀크티 기법, 당도 0~100 조절, 빈티지 찻잔 판매"
+      }
+    },
+    {
+      "cafe_name": "프롬하츠커피 신촌점",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/hgpg00/223243388359"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "3층짜리 건물 전체 사용 (지하1~지상3)",
+        "late_night": false,
+        "address": "서울 서대문구 연세로12길 19 1층",
+        "hours": "매일 10:00-22:30",
+        "kagong_score": 4,
+        "special": "2호선/경의중앙선 신촌역 사이 위치, 건물 전체 카페"
+      }
+    },
+    {
+      "cafe_name": "카페앤",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/mama2807/clip/7088102"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 카페",
+        "size": null,
+        "size_note": null,
+        "late_night": true,
+        "address": "신촌역 인근",
+        "hours": "24시간",
+        "kagong_score": 4,
+        "special": "24시 운영, 야간 카공 가능"
+      }
+    },
+    {
+      "cafe_name": "바나프레소 신촌",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/alsdn811n/223566171836"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "5층 전체 건물, 층마다 좌석 다양",
+        "late_night": null,
+        "address": "신촌역 인근",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "5층 전체가 카페, 층별 좌석 다양, 가성비"
+      }
+    },
+    {
+      "cafe_name": "연플레이스",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/zhuyan_twdairy/224078868060"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 분위기 덕분에 집중 잘 됨",
+        "size": null,
+        "size_note": null,
+        "late_night": null,
+        "address": "신촌 (연세대 인근)",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "은행나무 시즌 창가석 특히 좋음"
+      }
+    },
+    {
+      "cafe_name": "신촌 브루스",
+      "area": "신촌",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/binkong_2/223923703501"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": null,
+        "size_note": "창가 바테이블, 다닥다닥 붙어있지 않음",
+        "late_night": null,
+        "address": "신촌 (연대/이대 주변)",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "바테이블 카공, 팀플 가능, 바나나브레드"
+      }
+    },
+    {
+      "cafe_name": "본지르르 성수",
+      "area": "성수",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/reruns_/223697057044",
+        "https://m.blog.naver.com/estjason/223587261836"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "지하1층~2층 모든 층에 콘센트 좌석 많음",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "층마다 다른 매력, 편한 소파 자리",
+        "size": "large",
+        "size_note": "3층 규모 (지하1~2층)",
+        "late_night": null,
+        "address": "성수동",
+        "hours": null,
+        "kagong_score": 5,
+        "special": "치즈케이크 맛집, 반려견 동반 가능, 연희/수원에도 지점"
+      }
+    },
+    {
+      "cafe_name": "피어커피 성수본점",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/reruns_/223893904305"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "차분한 분위기",
+        "size": "medium",
+        "size_note": "키오스크 2대, 테라스 있음",
+        "late_night": false,
+        "address": "서울 성동구 광나루로4가길 24 1층",
+        "hours": "평일 08:30-20:00, 주말 09:30-20:00",
+        "kagong_score": 4,
+        "special": "5년 연속 블루리본 선정, 커피 맛집, 5개 지점 운영"
+      }
+    },
+    {
+      "cafe_name": "카페 스밍 스튜디오",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/zkfpzkfp4/223256236653"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "콘센트 곳곳에 위치",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "넓은 매장, 노트북 자리 많음",
+        "late_night": null,
+        "address": "서울숲역~성수역 사이",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "애견동반 가능, 라면 주문 가능, 대관 가능, 샐러드/샌드위치"
+      }
+    },
+    {
+      "cafe_name": "ddd (디디디)",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/lola37/clip/7285230"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "초록컬러 인테리어, 대형",
+        "late_night": null,
+        "address": "성수역 근처",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "성수 카공 카페 5에 선정 (성수동고릴라), 트렌디한 인테리어"
+      }
+    },
+    {
+      "cafe_name": "하우스오브바이닐 성수점",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/mirea3354/clip/10944011"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": "트렌디한 홍콩 감성",
+        "size": "medium",
+        "size_note": "넓은 테이블, 폭신한 소파",
+        "late_night": null,
+        "address": "서울 성동구 아차산로7길 29 2층",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "파블로바 맛집, 웨이팅 없는 카페"
+      }
+    },
+    {
+      "cafe_name": "이페메라",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/laloversarah/223951457490"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "우드톤, 차분한 분위기",
+        "size": "medium",
+        "size_note": null,
+        "late_night": null,
+        "address": "성수역 도보 10분",
+        "hours": "~20:00",
+        "kagong_score": 4,
+        "special": "테라스 있음, 우드톤 감성"
+      }
+    },
+    {
+      "cafe_name": "로우키",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/j__1271/224137400715"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "분위기 좋은 카공카페",
+        "size": null,
+        "size_note": null,
+        "late_night": null,
+        "address": "성수역 연무장길",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "라떼 맛집"
+      }
+    },
+    {
+      "cafe_name": "에어드랍커피 성수",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/yu3cio_/223922108483"
+      ],
+      "features": {
+        "has_outlet": false,
+        "outlet_plenty": false,
+        "outlet_note": "충전 유료",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "대형 카페",
+        "late_night": null,
+        "address": "성수동",
+        "hours": null,
+        "kagong_score": 2,
+        "special": "5천원대 가성비, 밤에는 Bar로 변신, 충전 유료 주의"
+      }
+    },
+    {
+      "cafe_name": "나루터",
+      "area": "잠실",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/assert3542/223812234837"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "콘센트가 많은 점이 노트북 유저에게 최고 장점",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "아늑함, 집중력 올라가는 분위기",
+        "size": "medium",
+        "size_note": "좌석 간격 여유",
+        "late_night": null,
+        "address": "잠실역 인근",
+        "hours": null,
+        "kagong_score": 5,
+        "special": "메뉴 퀄리티 대만족, 나만 알고 싶은 카페"
+      }
+    },
+    {
+      "cafe_name": "브루브루",
+      "area": "잠실",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/0530juhyun"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "대부분의 자리마다 콘센트와 스탠드",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "1,2층과 다른 어둡고 조용한 분위기(상층)",
+        "size": "large",
+        "size_note": "대형 카페, 다층",
+        "late_night": true,
+        "address": "송파나루역 근처 (송리단길)",
+        "hours": "24시간",
+        "kagong_score": 5,
+        "special": "24시 대형 카페, 케이크/베이글 맛있음, 잠실 카공 카페 1순위"
+      }
+    },
+    {
+      "cafe_name": "스타벅스 잠실롯데월드몰점",
+      "area": "잠실",
+      "mention_count": 1,
+      "sources": [
+        "https://search.naver.com/search.naver?where=blog&query=잠실+카공+카페"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "비교적 많은 콘센트",
+        "has_wifi": true,
+        "wifi_fast": true,
+        "noise_level": "moderate",
+        "noise_note": "프랜차이즈 특유의 안정적 분위기",
+        "size": "large",
+        "size_note": "롯데월드몰 내 대형",
+        "late_night": false,
+        "address": "잠실 롯데월드몰 내",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "접근성 최고, 롯데월드몰 주차 가능"
+      }
+    },
+    {
+      "cafe_name": "투썸플레이스 잠실점",
+      "area": "잠실",
+      "mention_count": 1,
+      "sources": [
+        "https://search.naver.com/search.naver?where=blog&query=잠실+카공+카페"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": null,
+        "size": "medium",
+        "size_note": null,
+        "late_night": false,
+        "address": "잠실역 인근",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "프랜차이즈, 안정적 서비스"
+      }
+    },
+    {
+      "cafe_name": "이디야 잠실점",
+      "area": "잠실",
+      "mention_count": 1,
+      "sources": [
+        "https://search.naver.com/search.naver?where=blog&query=잠실+카공+카페"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": null,
+        "size": "medium",
+        "size_note": null,
+        "late_night": false,
+        "address": "잠실역 인근",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "가성비 좋은 프랜차이즈"
+      }
+    },
+    {
+      "cafe_name": "랑데자뷰 분당서현점",
+      "area": "서현",
+      "mention_count": 3,
+      "sources": [
+        "https://m.blog.naver.com/woobible_log/224127129750",
+        "https://m.blog.naver.com/jhk1534/224093596928",
+        "https://m.blog.naver.com/suda_zip/223985878075"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "감각적인 인테리어, 카공/모임 모두 가능",
+        "size": "large",
+        "size_note": "130평 규모 대형 카페",
+        "late_night": null,
+        "address": "서현역 인근",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "130평 대형, 인형뽑기 머신, 카공족~MZ 모두 포용"
+      }
+    },
+    {
+      "cafe_name": "인비저블커피 분당서현점",
+      "area": "서현",
+      "mention_count": 3,
+      "sources": [
+        "https://m.blog.naver.com/dj_mok/223264678519",
+        "https://m.blog.naver.com/bonasoobin/224147262382",
+        "https://m.blog.naver.com/saki0307/clip/9087562"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 분위기, 어두운 블랙톤 인테리어",
+        "size": "medium",
+        "size_note": "로스터리 카페",
+        "late_night": null,
+        "address": "경기 성남시 분당구 (서현역 인근)",
+        "hours": null,
+        "kagong_score": 5,
+        "special": "로스터리 카페, 블랙톤 무드, 원두 선택 가능 (고소한/산미), 주차 불가"
+      }
+    },
+    {
+      "cafe_name": "코지 카페",
+      "area": "서현",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/s_eni/223933072675"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "자리마다는 아니지만 콘센트 자리 꽤 많음",
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "한적하고 노트북 하기 좋음",
+        "size": "medium",
+        "size_note": "넓은 내부, 다양한 좌석, 포토존",
+        "late_night": false,
+        "address": "경기 성남시 분당구 황새울로 352",
+        "hours": "11:00-20:00 (월요일 휴무)",
+        "kagong_score": 4,
+        "special": "귀여운 인테리어, 아메리카노 5,000원, 서현역 5번 출구, 흡연실 내부"
+      }
+    },
+    {
+      "cafe_name": "젠젠",
+      "area": "서현",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/ggultang2578/223806588510"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "따뜻하고 아늑한 '쉼'이 있는 공간",
+        "size": "large",
+        "size_note": "대형 카공카페",
+        "late_night": null,
+        "address": "서현역 도보 거리",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "수플레 팬케이크 맛집, 홍차향 팬케이크, 초코 카페라떼"
+      }
+    },
+    {
+      "cafe_name": "굿웨더 서현점",
+      "area": "서현",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/darin0-0/224184512483"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "벽돌쪽 의자 밑에 콘센트",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "넓은 자리",
+        "late_night": null,
+        "address": "서현역 인근",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "디저트 카페, 영수증 사진기, 거울샷 포토존"
+      }
+    },
+    {
+      "cafe_name": "바나프레소 분당서현점",
+      "area": "서현",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/m_____mv09/224072870034",
+        "https://m.blog.naver.com/minzuria/224206671513"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용한 분위기, 공부하러 많이 옴",
+        "size": "large",
+        "size_note": "깔끔하고 쾌적, 키오스크 2대",
+        "late_night": true,
+        "address": "경기 성남시 분당구 분당로53번길 10 101호",
+        "hours": "매일 07:00-23:00 (라스트오더 22:30)",
+        "kagong_score": 4,
+        "special": "아침 7시 오픈, 밤 11시까지, 가성비, 다이어트 저당 메뉴"
+      }
+    },
+    {
+      "cafe_name": "엑성프로방스",
+      "area": "정자",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/jomi-jomi/223652942047",
+        "https://m.blog.naver.com/bopull_/223796376283"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "문어발 코드까지 준비, 카공 판을 깔아줌",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "2층 위층은 카공 추천, 1층은 대화/모임",
+        "size": "large",
+        "size_note": "2층 구조, 테라스, 단체석",
+        "late_night": true,
+        "address": "경기 성남시 분당구 정자일로 197 2층",
+        "hours": "11:30-03:00 (라스트오더 02:30)",
+        "kagong_score": 5,
+        "special": "새벽 3시까지 운영, 주차 3시간 무료 (푸르지오시티2차 지하1층), 하이볼/와인도 판매"
+      }
+    },
+    {
+      "cafe_name": "헬싱키",
+      "area": "정자",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/jngs10000/223464933259",
+        "https://m.blog.naver.com/jngs10000/clip/4637078"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": null,
+        "size_note": null,
+        "late_night": true,
+        "address": "정자동 카페골목, 정자역 도보 3분",
+        "hours": "매일 11:00-24:00 (연중무휴)",
+        "kagong_score": 4,
+        "special": "에끌레어/디저트 맛집, 소개팅/데이트/카공 다목적, 자정까지"
+      }
+    },
+    {
+      "cafe_name": "카페 담",
+      "area": "정자",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/26763539/223096072690",
+        "https://kr.trip.com/moments/detail/seongnam-121856-126895078/"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": "좌석마다 분위기 다름",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "내부 조용한 편, 혼자 노트북/공부 적합",
+        "size": "large",
+        "size_note": "대형 카페, 다양한 좌석/공간",
+        "late_night": true,
+        "address": "경기 성남시 분당구 불정로 7 벤츠건물 1층",
+        "hours": "평일 09:00-23:30, 주말 10:00-23:30",
+        "kagong_score": 4,
+        "special": "벤츠건물 1층, 아지트 같은 숨은 좌석, 애견동반 가능"
+      }
+    },
+    {
+      "cafe_name": "댓이즈커피",
+      "area": "정자",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/dbswn3231/223718945104"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": "은은한 우드톤, 따뜻한 분위기",
+        "size": "medium",
+        "size_note": "유럽느낌 외관",
+        "late_night": null,
+        "address": "정자역 인근 (아파트 단지 가까움)",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "테라스 예쁨, 우드톤 인테리어"
+      }
+    },
+    {
+      "cafe_name": "골든클락",
+      "area": "정자",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/mj1202s/223897469510"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용하고 편안한 분위기",
+        "size": null,
+        "size_note": null,
+        "late_night": null,
+        "address": "정자역에서 약 740m",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "브런치 메뉴, 근처 숨은 맛집 많음"
+      }
+    },
+    {
+      "cafe_name": "제너럴스토어",
+      "area": "정자",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/jyw5667/223503771120"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "북적이지 않아 조용히 책 읽거나 공부하기 좋음",
+        "size": null,
+        "size_note": null,
+        "late_night": null,
+        "address": "정자동",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "휘낭시에 맛집, 커피 가성비, 조용한 분위기"
+      }
+    },
+    {
+      "cafe_name": "카페 더고",
+      "area": "정자",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/kalynn/224194688649"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": null,
+        "size_note": null,
+        "late_night": false,
+        "address": "경기 성남시 분당구 느티로 22 1층 112호",
+        "hours": "매일 09:30-21:00",
+        "kagong_score": 3,
+        "special": "혼다를 품은 카페, 정자역 5번 출구 바로 앞, 발렛파킹/무료주차, 시승 서비스"
+      }
+    },
+    {
+      "cafe_name": "플링크 커피 판교",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/jinjinjw/223846081250"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "자리마다 콘센트 마련",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "노트북 작업하시는 분들 많음",
+        "size": "medium",
+        "size_note": "바 테이블, 2인용, 4인용, 단체 테이블",
+        "late_night": false,
+        "address": "경기 성남시 분당구 판교역로 166 1층 12호",
+        "hours": "매일 08:00-20:00",
+        "kagong_score": 5,
+        "special": "서울 3대 크루아상, 카카오 아지트 1층, 아메리카노 5,000원, 페이스트리 맛집"
+      }
+    },
+    {
+      "cafe_name": "더노벰버라운지 판교운중점",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://quicktopic.tistory.com/entry/판교-작업-노트북-카페-추천-여기-4곳은-일단-저장해야-함-2025"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "조용하고 고급스러운 모던 인테리어",
+        "size": "large",
+        "size_note": "1인 소파, 테이블석, 2층 작업 테이블 추천",
+        "late_night": true,
+        "address": "판교 운중동",
+        "hours": "24시간 (새벽 2시 이후 주문 불가, 라운지는 24시간)",
+        "kagong_score": 5,
+        "special": "24시간 운영, 프리미엄 인테리어, 아메리카노 6,000원, 독서/업무 최적화"
+      }
+    },
+    {
+      "cafe_name": "콜렉티보 판교테크원점",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://quicktopic.tistory.com/entry/판교-작업-노트북-카페-추천-여기-4곳은-일단-저장해야-함-2025"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "고급스러운 인테리어, 조용한 업무 환경",
+        "size": "large",
+        "size_note": "넓은 층고, 테이블 간격 적당, 창가 자연 채광",
+        "late_night": null,
+        "address": "판교역 인접",
+        "hours": null,
+        "kagong_score": 5,
+        "special": "테크 기업인들의 아지트, 아메리카노 4,500원, 무료 주차장, 주말 혼잡"
+      }
+    },
+    {
+      "cafe_name": "자유의지",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://quicktopic.tistory.com/entry/판교-작업-노트북-카페-추천-여기-4곳은-일단-저장해야-함-2025"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "인더스트리얼 감성, 로스팅 현장 관찰 가능",
+        "size": "medium",
+        "size_note": "통유리 자연 채광",
+        "late_night": null,
+        "address": "판교",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "로스터리 카페, 드립커피 6,500원, 별점 4.8/5, 인근 유료 주차장"
+      }
+    },
+    {
+      "cafe_name": "까치화방",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/cycy15/223555948329"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": "조용한 카페",
+        "size": "large",
+        "size_note": "판교역 대형 카페",
+        "late_night": null,
+        "address": "판교역 인근",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "체리빙수 맛집, 호텔st 빙수 가성비"
+      }
+    },
+    {
+      "cafe_name": "스테드패스트 판교",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/dbwlsdk0813/224210375203"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "생각보다 넓고 큼",
+        "late_night": null,
+        "address": "판교 (주변 공영주차장 이용)",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "대형 카페, 데이트/작업 다목적"
+      }
+    },
+    {
+      "cafe_name": "오픈커피 백현동",
+      "area": "판교",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/kddkk_/224204408231"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "시끄럽지 않으면서 너무 정적이지도 않은 밸런스",
+        "size": "large",
+        "size_note": "1층+2층, 자리 넓음",
+        "late_night": null,
+        "address": "판교 백현동 카페거리",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "디저트 맛집, 카공 밸런스 좋음, 작곡하러 온 사람도 봄"
+      }
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "collected_at": "2026-03-16T00:25:00+09:00",
+  "area": "성수",
+  "total_cafes": 8,
+  "cafes": [
+    {
+      "cafe_name": "본지르르 성수",
+      "area": "성수",
+      "mention_count": 2,
+      "sources": [
+        "https://m.blog.naver.com/reruns_/223697057044",
+        "https://m.blog.naver.com/estjason/223587261836"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "지하1층~2층 모든 층에 콘센트 좌석 많음",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "moderate",
+        "noise_note": "층마다 다른 매력, 편한 소파 자리",
+        "size": "large",
+        "size_note": "3층 규모 (지하1~2층)",
+        "late_night": null,
+        "address": "성수동",
+        "hours": null,
+        "kagong_score": 5,
+        "special": "치즈케이크 맛집, 반려견 동반 가능, 연희/수원에도 지점"
+      }
+    },
+    {
+      "cafe_name": "피어커피 성수본점",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/reruns_/223893904305"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": true,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "차분한 분위기",
+        "size": "medium",
+        "size_note": "키오스크 2대, 테라스 있음",
+        "late_night": false,
+        "address": "서울 성동구 광나루로4가길 24 1층",
+        "hours": "평일 08:30-20:00, 주말 09:30-20:00",
+        "kagong_score": 4,
+        "special": "5년 연속 블루리본 선정, 커피 맛집, 5개 지점 운영"
+      }
+    },
+    {
+      "cafe_name": "카페 스밍 스튜디오",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/zkfpzkfp4/223256236653"
+      ],
+      "features": {
+        "has_outlet": true,
+        "outlet_plenty": true,
+        "outlet_note": "콘센트 곳곳에 위치",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "넓은 매장, 노트북 자리 많음",
+        "late_night": null,
+        "address": "서울숲역~성수역 사이",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "애견동반 가능, 라면 주문 가능, 대관 가능, 샐러드/샌드위치"
+      }
+    },
+    {
+      "cafe_name": "ddd (디디디)",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/lola37/clip/7285230"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "초록컬러 인테리어, 대형",
+        "late_night": null,
+        "address": "성수역 근처",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "성수 카공 카페 5에 선정 (성수동고릴라), 트렌디한 인테리어"
+      }
+    },
+    {
+      "cafe_name": "하우스오브바이닐 성수점",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/mirea3354/clip/10944011"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": "트렌디한 홍콩 감성",
+        "size": "medium",
+        "size_note": "넓은 테이블, 폭신한 소파",
+        "late_night": null,
+        "address": "서울 성동구 아차산로7길 29 2층",
+        "hours": null,
+        "kagong_score": 3,
+        "special": "파블로바 맛집, 웨이팅 없는 카페"
+      }
+    },
+    {
+      "cafe_name": "이페메라",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/laloversarah/223951457490"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "우드톤, 차분한 분위기",
+        "size": "medium",
+        "size_note": null,
+        "late_night": null,
+        "address": "성수역 도보 10분",
+        "hours": "~20:00",
+        "kagong_score": 4,
+        "special": "테라스 있음, 우드톤 감성"
+      }
+    },
+    {
+      "cafe_name": "로우키",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/j__1271/224137400715"
+      ],
+      "features": {
+        "has_outlet": null,
+        "outlet_plenty": null,
+        "outlet_note": null,
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": "quiet",
+        "noise_note": "분위기 좋은 카공카페",
+        "size": null,
+        "size_note": null,
+        "late_night": null,
+        "address": "성수역 연무장길",
+        "hours": null,
+        "kagong_score": 4,
+        "special": "라떼 맛집"
+      }
+    },
+    {
+      "cafe_name": "에어드랍커피 성수",
+      "area": "성수",
+      "mention_count": 1,
+      "sources": [
+        "https://m.blog.naver.com/yu3cio_/223922108483"
+      ],
+      "features": {
+        "has_outlet": false,
+        "outlet_plenty": false,
+        "outlet_note": "충전 유료",
+        "has_wifi": null,
+        "wifi_fast": null,
+        "noise_level": null,
+        "noise_note": null,
+        "size": "large",
+        "size_note": "대형 카페",
+        "late_night": null,
+        "address": "성수동",
+        "hours": null,
+        "kagong_score": 2,
+        "special": "5천원대 가성비, 밤에는 Bar로 변신, 충전 유료 주의"
+      }
+    }
+  ]
+}
